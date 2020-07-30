@@ -43,7 +43,6 @@
 	padding: 2px 3px 2px;
 	}
 }
-
 @media screen and (max-width: 920px){
 	.contact {
 		padding: 45px 1% 50px 1rem;
@@ -52,6 +51,21 @@
 		font-size: 55%;
 	}
 
+}
+@media screen and (max-width: 887px){
+	.page__cell-header--headline {
+		font-size: 17px;
+	}
+}
+@media screen and (max-width: 845px){
+	.page__cell-header--headline {
+		font-size: 15px;
+	}
+}
+@media screen and (max-width: 815px){
+	.page__cell-header--headline {
+		font-size: 13px;
+	}
 }
 @media screen and (max-width: 795px) {
 	html{
