@@ -232,7 +232,7 @@ li.slick-active {
 }
 .buttom-reserve,
 .btn__enjoy{
-	margin-left: 10px;
+	margin-left: 14px;
 	font-size: 20px;
 	letter-spacing: 0.1em;
 	color: #fff;
@@ -514,14 +514,6 @@ section::-webkit-scrollbar {
 	filter: blur(2px);
 }
 
-.ticketBtn .button .btn__enjoy {
-	margin-left: 20px;
-}
-.ticketBtn .buttom-img {
-	margin-left: 0;
-	margin-right: 0;
-}
-
 .ticketBtn {
 	position: absolute;
 	left: 50%;
@@ -530,20 +522,11 @@ section::-webkit-scrollbar {
 	opacity: 0;
 	transition: opacity .5s;
 }
-
-.ticketBtn picture {
-	filter: blur(0)!important; ;
-}
-
 .ticketBtn .button {
-	width: 168px;
-	height: 46px;
 	margin: 0;
 }
-
-.ticketBtn .button .buttom-reserve,
-.ticketBtn .button .btn__enjoy {
-	font-size: 19px;
+.ticketBtn picture {
+	filter: blur(0)!important; ;
 }
 .text-line{
 	margin-top: 40px;
