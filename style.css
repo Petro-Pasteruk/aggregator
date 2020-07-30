@@ -232,6 +232,7 @@ li.slick-active {
 }
 .buttom-reserve,
 .btn__enjoy{
+	margin-left: 10px;
 	font-size: 20px;
 	letter-spacing: 0.1em;
 	color: #fff;
@@ -514,7 +515,11 @@ section::-webkit-scrollbar {
 }
 
 .ticketBtn .button .btn__enjoy {
-	margin-left: 11px;
+	margin-left: 20px;
+}
+.ticketBtn .buttom-img {
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .ticketBtn {
