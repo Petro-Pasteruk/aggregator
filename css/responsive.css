@@ -77,10 +77,10 @@
 	.page__mobile{
 		display: block;
 	}
-	.page__cell-header,
-	.header{
-		height: 3rem;
-	}
+	/*.page__cell-header,*/
+	/*.header{*/
+	/*	height: 3rem;*/
+	/*}*/
 	.header {
 		position: relative;
 	}
@@ -91,9 +91,9 @@
 	.page__cell{
 		padding: 0 3.625rem;
 	}
-	.rightblock__trolley {
-		height: 3rem;
-	}
+	/*.rightblock__trolley {*/
+	/*	height: 3rem;*/
+	/*}*/
 	.rightblock__trolley-img {
 		margin: .75rem auto 0;
 	}
