@@ -504,30 +504,30 @@ section::-webkit-scrollbar {
 	transform: scale(1) translate3d(0, -10px, 0);
 }
 
-.ticket:hover .ticketBtn,
-.dablticket:hover .ticketBtn {
-	opacity: 1;
-}
+/*.ticket:hover .ticketBtn,*/
+/*.dablticket:hover .ticketBtn {*/
+/*	opacity: 1;*/
+/*}*/
 
-.ticket:hover picture,
-.dablticket:hover picture {
-	filter: blur(2px);
-}
+/*.ticket:hover picture,*/
+/*.dablticket:hover picture {*/
+/*	filter: blur(2px);*/
+/*}*/
 
-.ticketBtn {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	opacity: 0;
-	transition: opacity .5s;
-}
-.ticketBtn .button {
-	margin: 0;
-}
-.ticketBtn picture {
-	filter: blur(0)!important; ;
-}
+/*.ticketBtn {*/
+/*	position: absolute;*/
+/*	left: 50%;*/
+/*	top: 50%;*/
+/*	transform: translate(-50%, -50%);*/
+/*	opacity: 0;*/
+/*	transition: opacity .5s;*/
+/*}*/
+/*.ticketBtn .button {*/
+/*	margin: 0;*/
+/*}*/
+/*.ticketBtn picture {*/
+/*	filter: blur(0)!important; ;*/
+/*}*/
 .text-line{
 	margin-top: 40px;
 }
