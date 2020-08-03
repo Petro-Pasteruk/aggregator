@@ -299,7 +299,8 @@ li.slick-active {
 	display: flex;
 }
 .tab:hover {
-	border: 1px solid #333333;
+	border: 1px solid darkgrey;
+	border-bottom: none;
 }
 .tab {
 	transition: border .5s;
