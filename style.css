@@ -21,7 +21,6 @@
 *::after,
 *::before {
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 .clearfix::after,
@@ -76,18 +75,24 @@ span{
 	top: 0;
 	width: 100%;
 	background-color: #3b5998;
-	box-shadow: 0 0 5px 0 rgba(59, 89, 152, 0.004);
+	-webkit-box-shadow: 0 0 5px 0 rgba(59, 89, 152, 0.004);
+	        box-shadow: 0 0 5px 0 rgba(59, 89, 152, 0.004);
 	height: 60px;
 	z-index: 999;
 }
 .page__cell-header{
 	width: 100%;
 	height: 60px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .page__cell-header--headline{
-	align-self: center;
+	-ms-flex-item-align: center;
+	    align-self: center;
 	font-size: 20px;
 	font-weight: 700;
 	letter-spacing: .15em;
@@ -98,13 +103,22 @@ span{
     padding-bottom: 5px;
 }
 .page__cell-header--rightblock{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-self: center;
-	align-items: center;
+	-ms-flex-item-align: center;
+	    align-self: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 .polliapp{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .rightblock__trolley{
 	position: relative;
@@ -149,12 +163,16 @@ span{
     padding: 8px;
 	background-color: rgb(255, 255, 255);
 	opacity: 0.702;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
 	transition: 0.3s;
 }
 
 .slider_item-link a{
 	display: block;
 	color:#3b5998;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
 	transition: 0.3s;
 }
 .slider_item-link:hover a{
@@ -207,13 +225,20 @@ li.slick-active {
 .button{
 	border-radius: 5px;
 	background-color: #f02626;
-	box-shadow: 0 3px 9px 0 rgba(240, 38, 38, 0.29);
+	-webkit-box-shadow: 0 3px 9px 0 rgba(240, 38, 38, 0.29);
+	        box-shadow: 0 3px 9px 0 rgba(240, 38, 38, 0.29);
 	width: 198px;
     height: 56px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	/*justify-content: center ;*/
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin: 112px auto 0;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
 	transition: 0.3s;
 	padding: 0 20px;
 }
@@ -225,7 +250,8 @@ li.slick-active {
 }
 .button:hover{
 	background-color: red;
-    box-shadow: 0 0 15px 0 rgba(34, 34, 34, 0.59);
+    -webkit-box-shadow: 0 0 15px 0 rgba(34, 34, 34, 0.59);
+            box-shadow: 0 0 15px 0 rgba(34, 34, 34, 0.59);
 }
 .button:hover .buttom-reserve{
 	display: none;
@@ -236,6 +262,8 @@ li.slick-active {
 	font-size: 20px;
 	letter-spacing: 0.1em;
 	color: #fff;
+	-webkit-transition: 0.1s;
+	-o-transition: 0.1s;
 	transition: 0.1s;
 }
 .btn__enjoy{
@@ -267,9 +295,15 @@ li.slick-active {
 	position: relative;
 	cursor: pointer;
 	float: left;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 25%;
 	height: 164px;
 	/*margin-right: 1.8rem;*/
@@ -285,7 +319,10 @@ li.slick-active {
 }
 .wrapper input:checked + label {
 	background-color: #fff;
-    box-shadow: 0 7px 29px 0 rgba(255, 255, 255, 1),
+    -webkit-box-shadow: 0 7px 29px 0 rgba(255, 255, 255, 1),
+            0 15px 29px 0 rgba(255, 255, 255, 1),
+            0 -8px 29px 0 rgba(18, 18, 18, 0.16);
+            box-shadow: 0 7px 29px 0 rgba(255, 255, 255, 1),
             0 15px 29px 0 rgba(255, 255, 255, 1),
             0 -8px 29px 0 rgba(18, 18, 18, 0.16);
 	border: none;
@@ -296,14 +333,13 @@ li.slick-active {
 .wrapper input[id="tab-2"]:checked ~ .content .tab-2,
 .wrapper input[id="tab-3"]:checked ~ .content .tab-3,
 .wrapper input[id="tab-4"]:checked ~ .content .tab-4{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 .tab:hover {
 	border: 1px solid darkgrey;
 	border-bottom: none;
-}
-.tab {
-	transition: border .5s;
 }
 .wrapper .content {
 	clear: both;
@@ -311,14 +347,23 @@ li.slick-active {
 	background-color: #fff;
 }
 .content{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-    box-shadow: 0 5px 29px 0 rgba(18, 18, 18, 0.16);
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+    -webkit-box-shadow: 0 5px 29px 0 rgba(18, 18, 18, 0.16);
+            box-shadow: 0 5px 29px 0 rgba(18, 18, 18, 0.16);
 	z-index: 0;
 }
 .wrapper article {
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	position: relative;
 	width: 100%;
 	height: 642px;
@@ -368,7 +413,8 @@ section::-webkit-scrollbar {
 	text-align: left;
 	width: 174px;
 	padding-bottom: 6px;
-	align-self: flex-end;
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
 }
 .line{
 	background-color: #ebebeb;
@@ -421,16 +467,23 @@ section::-webkit-scrollbar {
 	right: 0;
 	left: 0;
 	bottom: 6px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	z-index: 100;
 }
 .link{
 	cursor: pointer;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
 	transition: 0.3s;
 }
 .link:hover{
-	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+	        transform: scale(1.2);
 }
 .section-link img{
 	display: block;
@@ -461,6 +514,8 @@ section::-webkit-scrollbar {
 	width: 20px;
 }
 .cell__line{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	/*justify-content: space-between;*/
 	width: 100%;
@@ -479,7 +534,9 @@ section::-webkit-scrollbar {
 	margin-right: 0;
 }
 .line3{
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
     margin-bottom: 0;
 }
 .dablticket {
@@ -487,26 +544,38 @@ section::-webkit-scrollbar {
 	width: 49%;
     margin-right: 2%;
 	cursor: pointer;
-    box-shadow: 0 5px 29px 0 rgba(18, 18, 18, 0.16),
+    -webkit-box-shadow: 0 5px 29px 0 rgba(18, 18, 18, 0.16),
     inset 0 0 29px 0 rgba(18, 18, 18, 0.16);
+            box-shadow: 0 5px 29px 0 rgba(18, 18, 18, 0.16),
+    inset 0 0 29px 0 rgba(18, 18, 18, 0.16);
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
 	transition: 0.3s;
 }
 .ticket{
 	position: relative;
 	width: 23.5%;
 	cursor: pointer;
-	box-shadow: 0 5px 29px 0 rgba(18, 18, 18, 0.16),
+	-webkit-box-shadow: 0 5px 29px 0 rgba(18, 18, 18, 0.16),
     inset 0 0 29px 0 rgba(18, 18, 18, 0.16);
+	        box-shadow: 0 5px 29px 0 rgba(18, 18, 18, 0.16),
+    inset 0 0 29px 0 rgba(18, 18, 18, 0.16);
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
 	transition: all .3s;
 }
 
 .ticket:hover,
 .dablticket:hover{
-	transform: translateY(-20px);
+	-webkit-transform: translateY(-20px);
+	    -ms-transform: translateY(-20px);
+	        transform: translateY(-20px);
 }
 
 .ticket picture,
 .dablticket picture {
+	-webkit-transition: opacity 2s;
+	-o-transition: opacity 2s;
 	transition: opacity 2s;
 }
 
@@ -514,7 +583,8 @@ section::-webkit-scrollbar {
 .dablticket:hover .blockHover {
 	z-index: 10;
 	/*opacity: 1;*/
-	clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+	-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+	        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
 }
 
 .ticket:hover picture,
@@ -531,16 +601,23 @@ section::-webkit-scrollbar {
 	width: 100%;
 	height: 100%;
 	background: #cce7f3;
+	-webkit-transition: -webkit-clip-path 2s;
+	transition: -webkit-clip-path 2s;
+	-o-transition: clip-path 2s;
 	transition: clip-path 2s;
+	transition: clip-path 2s, -webkit-clip-path 2s;
 	cursor: pointer;
-	clip-path: polygon(100% 0, 100% 0, 0 100%, 0% 100%);
+	-webkit-clip-path: polygon(100% 0, 100% 0, 0 100%, 0% 100%);
+	        clip-path: polygon(100% 0, 100% 0, 0 100%, 0% 100%);
 }
 
 .blockHover-text {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	font-size: 42px;
 	color: #000;
 	font-family: fantasy;
@@ -609,17 +686,26 @@ footer{
 
 }
 .cell__line-footer{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	/*height: 22.25rem;*/
 }
 .contact{
-	flex-basis: 50%;
+	-ms-flex-preferred-size: 50%;
+	    flex-basis: 50%;
 	padding: 45px 10px 50px 10px;
 	-ms-flex-pack: justify;
-	justify-content: center;
-	flex-shrink: 0;
+	-webkit-box-pack: center;
+	        justify-content: center;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	background-image: url("images/footer_bg.png");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -634,8 +720,12 @@ footer{
 	margin-bottom: 1rem;
 }
 .contact__item{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin-bottom: .75rem;
 }
 .contact__item-img{
@@ -658,8 +748,12 @@ footer{
 	font-family: sans-serif;
 }
 .open__item{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	width: 19rem;
 	margin-bottom: .55rem;
 }
@@ -709,20 +803,26 @@ a[href^="tel"]{
 }
 /* FOOTER */
 .deley1{
-	animation-delay:0.4s;
+	-webkit-animation-delay:0.4s;
+	        animation-delay:0.4s;
 }
 .deley3{
-	animation-delay:.8s;
+	-webkit-animation-delay:.8s;
+	        animation-delay:.8s;
 }
 .deley5{
-	animation-delay:1.2s;
+	-webkit-animation-delay:1.2s;
+	        animation-delay:1.2s;
 }
 .deley2{
-	animation-delay:1s;
+	-webkit-animation-delay:1s;
+	        animation-delay:1s;
 }
 .deley4{
-	animation-delay:1.4s;
+	-webkit-animation-delay:1.4s;
+	        animation-delay:1.4s;
 }
 .deley6{
-	animation-delay:1.8s;
+	-webkit-animation-delay:1.8s;
+	        animation-delay:1.8s;
 }
