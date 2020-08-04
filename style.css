@@ -502,8 +502,50 @@ section::-webkit-scrollbar {
 
 .ticket:hover,
 .dablticket:hover{
-	transform: scale(1) translate3d(0, -10px, 0);
+	transform: translateY(-20px);
 }
+
+.ticket picture,
+.dablticket picture {
+	transition: opacity 2s;
+}
+
+.ticket:hover .blockHover,
+.dablticket:hover .blockHover {
+	z-index: 10;
+	/*opacity: 1;*/
+	clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.ticket:hover picture,
+.dablticket:hover picture {
+	opacity: 0;
+}
+
+.blockHover {
+	/*opacity: 0;*/
+	z-index: -100;
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #cce7f3;
+	transition: clip-path 2s;
+	cursor: pointer;
+	clip-path: polygon(100% 0, 100% 0, 0 100%, 0% 100%);
+}
+
+.blockHover-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 42px;
+	color: #000;
+	font-family: fantasy;
+}
+
 
 /*.ticket:hover .ticketBtn,*/
 /*.dablticket:hover .ticketBtn {*/
