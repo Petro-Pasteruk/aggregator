@@ -1,4 +1,5 @@
 @import url("css/normalize.css");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap');
 @font-face {
 	font-family: 'Avenir Next';
 	src: local('Avenir Next Bold'), local('Avenir-Next-Bold'),
@@ -587,10 +588,10 @@ section::-webkit-scrollbar {
 	        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
 }
 
-.ticket:hover picture,
-.dablticket:hover picture {
-	opacity: 0;
-}
+/*.ticket:hover picture,*/
+/*.dablticket:hover picture {*/
+/*	opacity: 0;*/
+/*}*/
 
 .blockHover {
 	/*opacity: 0;*/
@@ -600,7 +601,7 @@ section::-webkit-scrollbar {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #cce7f3;
+	background: rgba(0, 0, 0, 0.7);
 	-webkit-transition: -webkit-clip-path 2s;
 	transition: -webkit-clip-path 2s;
 	-o-transition: clip-path 2s;
@@ -619,8 +620,10 @@ section::-webkit-scrollbar {
 	    -ms-transform: translate(-50%, -50%);
 	        transform: translate(-50%, -50%);
 	font-size: 42px;
-	color: #000;
-	font-family: fantasy;
+	color: #fff;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 200;
+	font-style: italic;
 }
 
 
