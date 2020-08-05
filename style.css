@@ -673,6 +673,7 @@ section::-webkit-scrollbar {
 	font-size: 32px;
 	line-height: 0.1em;
 	margin-left: -16px;
+	margin-right: 3px;
 }
 /* SECTION4 */
 
@@ -728,6 +729,13 @@ footer{
 	        align-items: center;
 	margin-bottom: .75rem;
 }
+.contact__item.address {
+	max-width: 250px;
+}
+.contact__item.address .contact__item-img {
+	min-width: 3.25rem;
+}
+
 .contact__item-img{
 	width: 3.25rem;
 	margin-right: 1rem;
