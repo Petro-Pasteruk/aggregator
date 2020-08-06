@@ -102,7 +102,7 @@
 							<a href="#">Learn More</a>
 						</div>
 					</div>
-					<div class="slider4_item animate__animated animate__fadeIn animate__slower">
+					<div class="slider4_item removeTab animate__animated animate__fadeIn animate__slower">
 						<picture>
 							<source class="img" srcset="img/museum24.webp" type="image/webp">
 							<img class="img" src="img/museum24.png" alt="">
@@ -111,7 +111,7 @@
 							<a href="#">Learn More</a>
 						</div>
 					</div>
-					<div class="slider4_item animate__animated animate__fadeIn animate__slower">
+					<div class="slider4_item removeTab animate__animated animate__fadeIn animate__slower">
 						<picture>
 							<source class="img" srcset="img/museum11.webp" type="image/webp">
 							<img class="img" src="img/museum11.png" alt="">
@@ -138,7 +138,7 @@
 							<a href="#">Learn More</a>
 						</div>
 					</div>
-					<div class="slider4_item animate__animated animate__fadeIn animate__slower">
+					<div class="slider4_item removeTab animate__animated animate__fadeIn animate__slower">
 						<picture>
 							<source class="img" srcset="img/museum22.webp" type="image/webp">
 							<img class="img" src="img/museum22.png" alt="">
@@ -147,7 +147,7 @@
 							<a href="#">Learn More</a>
 						</div>
 					</div>
-					<div class="slider4_item animate__animated animate__fadeIn animate__slower">
+					<div class="slider4_item removeTab animate__animated animate__fadeIn animate__slower">
 						<picture>
 							<source class="img" srcset="img/museum10.webp" type="image/webp">
 							<img class="img" src="img/museum10.png" alt="">
@@ -174,7 +174,7 @@
 							<a href="#">Learn More</a>
 						</div>
 					</div>
-					<div class="slider4_item animate__animated animate__fadeIn animate__slower">
+					<div class="slider4_item removeTab animate__animated animate__fadeIn animate__slower">
 						<picture>
 							<source class="img" srcset="img/museum15.webp" type="image/webp">
 							<img class="img" src="img/museum15.png" alt="">
@@ -183,7 +183,7 @@
 							<a href="#">Learn More</a>
 						</div>
 					</div>
-					<div class="slider4_item animate__animated animate__fadeIn animate__slower">
+					<div class="slider4_item removeTab animate__animated animate__fadeIn animate__slower">
 						<picture>
 							<source class="img" srcset="img/museum18.webp" type="image/webp">
 							<img class="img" src="img/museum18.png" alt="">
@@ -222,15 +222,15 @@
 								<img class="icon animate__animated animate__zoomIn deley1" src="images/torture_icon.png" alt="">
 							</picture>
 						</label>
-						<input type="radio" name="tab" id="tab-2">
-						<label for="tab-2" class="tab">
+						<input type="radio" name="tab" id="tab-2" class="removeTab removeStyle">
+						<label for="tab-2" class="tab removeTab removeStyle">
 							<picture>
 								<source class="icon animate__animated animate__zoomIn deley3" srcset="images/range_icon.webp" type="image/webp">
 								<img class="icon animate__animated animate__zoomIn deley3" src="images/range_icon.png" alt="">
 							</picture>
 						</label>
-						<input type="radio" name="tab" id="tab-3" class="removeTab">
-						<label for="tab-3" class="tab removeTab">
+						<input type="radio" name="tab" id="tab-3" class="removeTab removeStyle">
+						<label for="tab-3" class="tab removeTab removeStyle">
 							<picture>
 								<source class="icon animate__animated animate__zoomIn deley5" srcset="images/illusion_icon.webp" type="image/webp">
 								<img class="icon animate__animated animate__zoomIn deley5" src="images/illusion_icon.png" alt="">
@@ -3089,26 +3089,26 @@
 		<script src="js/script.js"></script>
 		<script src="js/jquery.nice-select.min.js"></script>
 		<script>
-        $(document).ready(function() {
-            $('select').niceSelect();
-        });
-        $('select').niceSelect('update');
-
-        //Плавний скрол к ALL ATTRACTIONS UNDER ONE ROOF
-		$(document).ready(function () {
-			$(".button-link").click(function () {
-				var elementClick = $(this).attr("href");
-				var destination = $(elementClick).offset().top;
-				$('html').animate({ scrollTop: destination }, 1100);
+			$(document).ready(function() {
+				$('select').niceSelect();
 			});
-		})
+			$('select').niceSelect('update');
 
-		$(document).ready(function() {
-			setTimeout(() => {
-				document.getElementById("fileAnimate").remove();
-			}, 3500);
-		});
-	</script>
+			//Плавний скрол к ALL ATTRACTIONS UNDER ONE ROOF
+			$(document).ready(function () {
+				$(".button-link").click(function () {
+					var elementClick = $(this).attr("href");
+					var destination = $(elementClick).offset().top;
+					$('html').animate({ scrollTop: destination }, 1100);
+				});
+			})
+
+			$(document).ready(function() {
+				setTimeout(() => {
+					document.getElementById("fileAnimate").remove();
+				}, 3500);
+			});
+		</script>
 		<script>
 			$(document).ready(function () {
 				setTimeout(function () {
@@ -3220,6 +3220,7 @@
 									parentParentMap = parentMap.parentElement,
 									currentNiceSelect = $(".nice-select .current"),
 									allRemoveTab = document.querySelectorAll(".removeTab"),
+									allRemoveStyleTab = document.querySelectorAll(".removeStyle"),
 									allTab = document.querySelectorAll(".tab"),
 									cellLineAddSb = document.querySelector(".cell__line.addSb");
 
@@ -3237,7 +3238,7 @@
 										parentParentMap.appendChild(newMapParent);
 									}
 									allTab.forEach(item => {
-										item.setAttribute("style", "width: 33.33%;");
+										item.setAttribute("style", "width: 50%;");
 									});
 									allRemoveTab.forEach(item => {
 										item.style.display = "none";
@@ -3255,11 +3256,12 @@
 										parentParentMap.removeChild(parentMap);
 										parentParentMap.appendChild(oldMapParent);
 									}
-
 									allRemoveTab.forEach(item => {
+										item.style.display = "block";
+									});
+									allRemoveStyleTab.forEach(item => {
 										item.setAttribute("style", "");
 									});
-
 									allTab.forEach(item => {
 										item.setAttribute("style", "");
 									});
