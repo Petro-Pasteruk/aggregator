@@ -580,34 +580,39 @@ section::-webkit-scrollbar {
 	transition: opacity 2s;
 }
 
+.ticket:hover picture,
+.dablticket:hover picture {
+	filter: blur(2px);
+}
+
 .ticket:hover .blockHover,
 .dablticket:hover .blockHover {
-	z-index: 10;
-	/*opacity: 1;*/
+	/*z-index: 10;*/
+	opacity: 1;
 	-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
 	        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
 }
 
-/*.ticket:hover picture,*/
-/*.dablticket:hover picture {*/
-/*	opacity: 0;*/
-/*}*/
+.ticket picture,
+.dablticket picture {
+	transition: filter 2s;
+}
 
 .blockHover {
-	/*opacity: 0;*/
-	z-index: -100;
+	opacity: 0;
+	/*z-index: -100;*/
 	top: 50%;
 	transform: translateY(-50%);
 	left: 0;
 	position: absolute;
 	width: 100%;
 	height: 93.6%;
-	background: rgba(0, 0, 0, 0.7);
-	-webkit-transition: -webkit-clip-path 2s;
-	transition: -webkit-clip-path 2s;
-	-o-transition: clip-path 2s;
-	transition: clip-path 2s;
-	transition: clip-path 2s, -webkit-clip-path 2s;
+	background: rgba(0, 0, 0, 0.5);
+	-webkit-transition: -webkit-clip-path 2s, opacity 1s;
+	transition: -webkit-clip-path 2s, opacity 1s;
+	-o-transition: clip-path 2s, opacity 1s;
+	transition: clip-path 2s,opacity 1s;
+	transition: clip-path 2s, -webkit-clip-path 2s, opacity 1s;
 	cursor: pointer;
 	-webkit-clip-path: polygon(100% 0, 100% 0, 0 100%, 0% 100%);
 	        clip-path: polygon(100% 0, 100% 0, 0 100%, 0% 100%);
