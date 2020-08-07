@@ -1167,7 +1167,7 @@
 								<div class="h1">Hours open <span>365</span> days</div>
 								<div class="open__item">
 									<div class="open__item-text">Monday:</div>
-									<div class="open__item-text">10 am – 11 pm</div>
+									<div class="open__item-text firstOpenItemText">10 am – 11 pm</div>
 								</div>
 								<div class="open__item">
 									<div class="open__item-text">Tuesday:</div>
@@ -3146,7 +3146,7 @@
 								<div class="h1">Hours open <span>365</span> days</div>
 								<div class="open__item">
 									<div class="open__item-text">Monday:</div>
-									<div class="open__item-text">10 am – 11 pm</div>
+									<div class="open__item-text firstOpenItemText">10 am – 11 pm</div>
 								</div>
 								<div class="open__item">
 									<div class="open__item-text">Tuesday:</div>
@@ -3246,7 +3246,7 @@
 \t\t\t\t\t\t\t\t<div class="h1">Hours open <span>365</span> days</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Monday:</div>
-\t\t\t\t\t\t\t\t\t<div class="open__item-text">10 am – 11 pm</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text firstOpenItemText">10 am – 11 pm</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Tuesday:</div>
@@ -3281,7 +3281,7 @@
 \t\t\t\t\t\t\t\t<div class="h1">Hours open <span>365</span> days</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Monday:</div>
-\t\t\t\t\t\t\t\t\t<div class="open__item-text">10 am – 11 pm</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text firstOpenItemText">10 am – 11 pm</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Tuesday:</div>
@@ -3342,6 +3342,14 @@
 									parentContact.removeChild(currentOpen);
 									parentContact.appendChild(newOpen);
 
+									const
+											centerElements =  document.querySelectorAll(".open__item-text.center"),
+											firstOpenItemText = document.querySelector(".firstOpenItemText");
+									centerElements.forEach(item => {
+										item.style.marginRight = "0";
+									});
+									firstOpenItemText.style.marginRight = "3px";
+
 									parentElementItemAddress.removeChild(currentItemAddress);
 									parentElementItemAddress.appendChild(newContactItem);
 
@@ -3358,10 +3366,17 @@
 									visibleTab.querySelector(".cell__line").style.justifyContent = "space-between";
 									visibleTab.style.display = "block";
 									visibleTab.querySelector(".dablticket .blockHover").style.transform = "translateY(-51%)";
-
 								} else if (currentNiceSelect[2].innerText === "Chicago") {
 									parentContact.removeChild(currentOpen);
 									parentContact.appendChild(oldOpen);
+
+									const
+											centerElements =  document.querySelectorAll(".open__item-text.center"),
+											firstOpenItemText = document.querySelector(".firstOpenItemText");
+									centerElements.forEach(item => {
+										item.setAttribute("style", "");
+									});
+									firstOpenItemText.setAttribute("style", "");
 
 									parentElementItemAddress.removeChild(currentItemAddress);
 									parentElementItemAddress.appendChild(oldContactItem);
