@@ -553,6 +553,9 @@ section::-webkit-scrollbar {
 	-o-transition: 0.3s;
 	transition: 0.3s;
 }
+.dablticket.smallWidth {
+	width: 41.6%;
+}
 .ticket{
 	position: relative;
 	width: 23.5%;
@@ -597,7 +600,9 @@ section::-webkit-scrollbar {
 /*.dablticket picture {*/
 /*	transition: filter 2s;*/
 /*}*/
-
+.visibleTab {
+	display: none;
+}
 .blockHover {
 	opacity: 0;
 	/*z-index: -100;*/

@@ -836,13 +836,13 @@
 			<!--SECTION4-->
 				<div class="page__row" id="allAttractionsUnderOneRoof">
 	
-					<div class="page__cell">
+					<div class="page__cell removeTab">
 						<div class="page__cell-headline anime4">
 							<img class="poli anime7 deley4" src="img/hotpng.png" alt="">
 							ALL ATTRACTIONS UNDER ONE ROOF!
 						</div>
 					</div>
-					<div class="page__cell">
+					<div class="page__cell removeTab">
 						<div class="cell__line">
 							<div class="dablticket snip1104 anime9 deley1">
 								<picture>
@@ -996,6 +996,107 @@
 <!--								</a>-->
 							</div>
 						</div>
+					</div>
+					<div class="page__cell visibleTab">
+						<div class="cell__line">
+							<div class="dablticket smallWidth snip1104">
+								<picture>
+									<source class="img" srcset="img/dabl.webp" type="image/webp">
+									<img class="img" src="img/dabl.png" alt="">
+								</picture>
+								<div class="blockHover">
+									<span class="blockHover-text">Reserve</span>
+								</div>
+								<!--								<a href="#" class="ticketBtn">-->
+								<!--									<div class="button">-->
+								<!--										<div class="buttom-img">-->
+								<!--											<picture>-->
+								<!--												<source class="img" srcset="images/ticket.webp" type="image/webp">-->
+								<!--												<img class="img" src="images/ticket.png" alt="">-->
+								<!--											</picture>-->
+								<!--										</div>-->
+								<!--										<div class="buttom-reserve">Reserve</div>-->
+								<!--										<div class="btn__enjoy">ENJOY</div>-->
+								<!--									</div>-->
+								<!--								</a>-->
+							</div>
+							<div class="ticket snip1104">
+								<picture>
+									<source class="img bg-hover" srcset="images/bg_torture-2.webp" type="image/webp">
+									<img class="img bg-hover" src="images/bg_torture-2.png" alt="">
+								</picture>
+								<div class="blockHover">
+									<span class="blockHover-text">Reserve</span>
+								</div>
+								<!--								<a href="#" class="ticketBtn">-->
+								<!--									<div class="button">-->
+								<!--										<div class="buttom-img">-->
+								<!--											<picture>-->
+								<!--												<source class="img" srcset="images/ticket.webp" type="image/webp">-->
+								<!--												<img class="img" src="images/ticket.png" alt="">-->
+								<!--											</picture>-->
+								<!--										</div>-->
+								<!--										<div class="buttom-reserve">Reserve</div>-->
+								<!--										<div class="btn__enjoy">ENJOY</div>-->
+								<!--									</div>-->
+								<!--								</a>-->
+							</div>
+							<div class="ticket snip1104">
+								<picture>
+									<source class="img bg-hover" srcset="images/bg_micro-2.webp" type="image/webp">
+									<img class="img bg-hover" src="images/bg_micro-2.png" alt="">
+								</picture>
+								<div class="blockHover">
+									<span class="blockHover-text">Reserve</span>
+								</div>
+								<!--								<a href="#" class="ticketBtn">-->
+								<!--									<div class="button">-->
+								<!--										<div class="buttom-img">-->
+								<!--											<picture>-->
+								<!--												<source class="img" srcset="images/ticket.webp" type="image/webp">-->
+								<!--												<img class="img" src="images/ticket.png" alt="">-->
+								<!--											</picture>-->
+								<!--										</div>-->
+								<!--										<div class="buttom-reserve">Reserve</div>-->
+								<!--										<div class="btn__enjoy">ENJOY</div>-->
+								<!--									</div>-->
+								<!--								</a>-->
+							</div>
+						</div>
+						<!--<div class="cell__line">
+							<div class="ticket ticket-row2 ticket2 snip1104">
+								<picture class="bg">
+									<source class="img bg-hover" srcset="images/bg_torture-2.webp" type="image/webp">
+									<img class="img bg-hover" src="images/bg_torture-2.png" alt="">
+								</picture>
+
+								<a href="#"></a>
+							</div>
+							<div class="ticket ticket2 snip1104">
+								<picture class="bg">
+									<source class="img bg-hover" srcset="images/bg_axe-2.webp" type="image/webp">
+									<img class="img bg-hover" src="images/bg_axe-2.png" alt="">
+								</picture>
+
+								<a href="#"></a>
+							</div>
+							<div class="ticket ticket2 snip1104">
+								<picture class="bg">
+									<source class="img bg-hover" srcset="images/bg_illusion-2.webp" type="image/webp">
+									<img class="img bg-hover" src="images/bg_illusion-2.png" alt="">
+								</picture>
+
+								<a href="#"></a>
+							</div>
+							<div class="ticket ticket2 snip1104">
+								<picture class="bg">
+									<source class="img bg-hover" srcset="images/bg_micro-2.webp" type="image/webp">
+									<img class="img bg-hover" src="images/bg_micro-2.png" alt="">
+								</picture>
+
+								<a href="#"></a>
+							</div>
+						</div>-->
 					</div>
 					<div class="page__cell">
 						<div class="cell__line line3">
@@ -3222,7 +3323,8 @@
 									allRemoveTab = document.querySelectorAll(".removeTab"),
 									allRemoveStyleTab = document.querySelectorAll(".removeStyle"),
 									allTab = document.querySelectorAll(".tab"),
-									cellLineAddSb = document.querySelector(".cell__line.addSb");
+									cellLineAddSb = document.querySelector(".cell__line.addSb"),
+									visibleTab = document.querySelector(".visibleTab");
 
 
 							setTimeout(() => {
@@ -3243,7 +3345,9 @@
 									allRemoveTab.forEach(item => {
 										item.style.display = "none";
 									});
-									cellLineAddSb.style.cssText = "display: flex; justify-content: space-evenly;";
+									visibleTab.querySelector(".cell__line").style.justifyContent = "space-between";
+									visibleTab.style.display = "block";
+									visibleTab.querySelector(".dablticket .blockHover").style.transform = "translateY(-51%)";
 
 								} else if (currentNiceSelect[2].innerText === "Chicago") {
 									parentContact.removeChild(currentOpen);
@@ -3266,6 +3370,7 @@
 										item.setAttribute("style", "");
 									});
 									cellLineAddSb.setAttribute("style", "");
+									visibleTab.style.display = "none";
 								}
 							}, 50);
 						}
