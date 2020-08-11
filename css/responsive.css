@@ -457,7 +457,7 @@
     padding: 1px 4px 3px;
 	}
 		.nice-select {
-			width: 95px!important;
+			width: 130px!important;
 			height: 20px!important;
 		}
 	.page__cell-header--headline {
@@ -469,7 +469,7 @@
 		font-size: 12px!important;
 	}
 	.nice-select:after {
-		left: 78px!important;
+		left: 114px!important;
 	}
 	.nice-select .option {
 		font-size: 12px!important;
@@ -557,6 +557,11 @@
 		font-size: 7px;
 	}
 }
+@media screen and (max-width: 393px) {
+	.page__cell-header--headline {
+		font-size: 10px;
+	}
+}
 @media screen and (max-width: 380px){
 	.dablticket{
 		box-shadow: none;
@@ -573,6 +578,11 @@
 	.dablticket{
 		box-shadow: none;
 		
+	}
+}
+@media screen and (max-width: 360px) {
+	.page__cell-header--headline {
+		line-height: inherit;
 	}
 }
 @media screen and (max-width: 350px){
