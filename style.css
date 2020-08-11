@@ -632,9 +632,9 @@ section::-webkit-scrollbar {
 	        transform: translate(-50%, -50%);
 	font-size: 42px;
 	color: #fff;
-	font-family: 'Josefin Sans', sans-serif;
-	font-weight: 200;
-	font-style: italic;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	letter-spacing: .15em;
 }
 
 
