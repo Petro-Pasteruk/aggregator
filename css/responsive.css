@@ -551,11 +551,8 @@
 	.cell__line-footer{
 		height: auto;
 	}
-	.resaze{
-		display: none;
-	}
 	.resazem{
-		display: flex;
+		display: none;
 	}
 	.open__item-text2 {
 		font-size: 7px;
@@ -569,6 +566,11 @@
 @media screen and (max-width: 420px) {
 	.contact__item-img {
 		min-width: 26px;
+	}
+}
+@media screen and (max-width: 400px){
+	.h1 {
+		font-size: 15px;
 	}
 }
 @media screen and (max-width: 393px) {
@@ -588,6 +590,9 @@
 	}
 	.h1 {
 		font-size: 14px;
+	}
+	.contact.mobile {
+		align-items: baseline;
 	}
 }
 @media screen and (max-width: 370px){
