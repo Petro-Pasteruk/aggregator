@@ -281,7 +281,7 @@ $(document).ready(function () {
 
                 setTimeout(() => {
                     if (document.documentElement.clientWidth > 795) {
-                        if (currentNiceSelect[2].innerText === "St Augustine") {
+                        if (currentNiceSelect[2].innerText === "St. Augustine") {
                             ifAugustine();
                         } else if (currentNiceSelect[2].innerText === "Chicago") {
                             ifChicago();
@@ -297,7 +297,7 @@ $(document).ready(function () {
                         oldMapParent.setAttribute("id", "parentMobileMap");
                         newMapParent.setAttribute("id", "parentMobileMap");
 
-                        if (currentNiceSelect[3].innerText === "St Augustine") {
+                        if (currentNiceSelect[3].innerText === "St. Augustine") {
 
                             sliderOne.slick("unslick");
                             sliderTwo.slick("unslick");
