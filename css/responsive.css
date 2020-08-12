@@ -161,8 +161,8 @@
 	}
 	.slider1__headline{
 		position: absolute;
-    text-shadow: 1px 1px 5px #000;
-	color: #70bccf;
+		text-shadow: 1px 1px 5px darkblue;
+		color: #fff;
     font-weight: 700;
     left: 50%;
     top: 11.5rem;

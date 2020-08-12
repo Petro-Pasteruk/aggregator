@@ -5,7 +5,7 @@ let sliderOne = $('.slider1').slick({
     dots: true,
     arrows: false,
     infinite: false,
-    initialSlide: 1,
+    initialSlide: 0,
     asNavFor: '.slider2',
     responsive:[
         {
@@ -20,7 +20,7 @@ let sliderTwo = $('.slider2').slick({
     autoplay: false,
     infinite: false,
     arrows: false,
-    initialSlide: 1,
+    initialSlide: 0,
     asNavFor: '.slider1'
 });
 $('.slider3').slick({
