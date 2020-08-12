@@ -576,6 +576,11 @@ section::-webkit-scrollbar {
 	        transform: translateY(-20px);
 }
 
+.ticket.mobile:hover,
+.dablticket.mobile:hover  {
+	transform: translateY(0);
+}
+
 .ticket picture,
 .dablticket picture {
 	-webkit-transition: opacity 2s;
