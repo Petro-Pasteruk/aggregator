@@ -309,7 +309,7 @@ $(document).ready(function () {
                                 dots: true,
                                 arrows: false,
                                 infinite: false,
-                                initialSlide: 1,
+                                initialSlide: 0,
                                 asNavFor: '.slider2',
                                 responsive:[
                                     {
@@ -324,7 +324,7 @@ $(document).ready(function () {
                                 autoplay: false,
                                 infinite: false,
                                 arrows: false,
-                                initialSlide: 1,
+                                initialSlide: 0,
                                 asNavFor: '.slider1'
                             });
 
@@ -340,7 +340,7 @@ $(document).ready(function () {
                                 dots: true,
                                 arrows: false,
                                 infinite: false,
-                                initialSlide: 1,
+                                initialSlide: 0,
                                 asNavFor: '.slider2',
                                 responsive:[
                                     {
@@ -355,7 +355,7 @@ $(document).ready(function () {
                                 autoplay: false,
                                 infinite: false,
                                 arrows: false,
-                                initialSlide: 1,
+                                initialSlide: 0,
                                 asNavFor: '.slider1'
                             });
 
