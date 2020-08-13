@@ -171,9 +171,10 @@ $(document).ready(function () {
 
         let
             counter = 0,
-            saveFullRemoveTab = [];
+            saveFullRemoveTab = [],
+            currentSelectedCity = "Chicago";
 
-        $(".nice-select").on("click", function () {
+        $(".nice-select").on("click", function (e) {
             if (counter) {
                 let
                     parentContact = document.querySelector(".contact"),
@@ -297,7 +298,7 @@ $(document).ready(function () {
                         oldMapParent.setAttribute("id", "parentMobileMap");
                         newMapParent.setAttribute("id", "parentMobileMap");
 
-                        if (currentNiceSelect[3].innerText === "St. Augustine") {
+                        if (currentNiceSelect[3].innerText === "St. Augustine" && e.target !== currentNiceSelect[3] && currentSelectedCity !== "St. Augustine") {
 
                             sliderOne.slick("unslick");
                             sliderTwo.slick("unslick");
@@ -328,7 +329,7 @@ $(document).ready(function () {
                                 asNavFor: '.slider1'
                             });
 
-                        } else if (currentNiceSelect[3].innerText === "Chicago") {
+                        } else if (currentNiceSelect[3].innerText === "Chicago" && e.target !== currentNiceSelect[3] && currentSelectedCity !== "Chicago") {
 
                             sliderOne.slick("unslick");
                             sliderTwo.slick("unslick");
@@ -359,6 +360,10 @@ $(document).ready(function () {
                                 asNavFor: '.slider1'
                             });
 
+                        }
+
+                        if (e.target.classList.contains("option")) {
+                            currentSelectedCity = e.target.textContent;
                         }
                     }
                 }, 50);
