@@ -538,6 +538,12 @@
 	.contact__item-img {
 		width: 26px;
 	}
+	.contact__item-img.copy {
+		margin-left: 0.06rem;
+	}
+	.contact__item.address .contact__item-img {
+		min-width: 26px;
+	}
 	.open__item {
 		width: 100%;
 	}
