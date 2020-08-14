@@ -491,7 +491,7 @@ section::-webkit-scrollbar {
 	margin: 0 auto;
 }
 .page__cell-feedback{
-	font-size: 24px;
+	font-size: 2rem;
 	color: #101010;
 	line-height: 1.333;
 	text-align: center;
