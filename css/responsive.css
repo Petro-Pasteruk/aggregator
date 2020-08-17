@@ -299,7 +299,7 @@
 	}*/
 	.article__item{
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 		padding-top: 1.75rem;
 		width: 100%;
 	}
@@ -307,6 +307,9 @@
 		width: 5.375rem;
 		margin-right: 2.5rem;
 		margin-left: 3.25rem;
+	}
+	.article__item-img img {
+		border-radius: 50%;
 	}
 	.article__item-text{
 		font-size: 18px;
