@@ -71,6 +71,12 @@
 	html{
 		font-size: 100%;
 	}
+	.open__item-text.center {
+		margin-right: 10px;
+	}
+	.open__item-text.firstOpenItemText {
+		margin-right: 3px;
+	}
 	.contact-us {
 		width: 48%;
 	}
@@ -441,6 +447,12 @@
 @media screen and (max-width: 700px) {
 	html{
 		font-size: 60%;
+	}
+	.open__item-text.center {
+		margin-right: 6px;
+	}
+	.open__item-text.firstOpenItemText {
+		margin-right: 3px;
 	}
 }
 @media screen and (max-width: 450px) {
