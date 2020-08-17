@@ -71,6 +71,12 @@
 	html{
 		font-size: 100%;
 	}
+	.contact-us {
+		width: 48%;
+	}
+	.contact__item.address {
+		max-width: 100%;
+	}
 	.page__desktop{
 		display: none;
 	}
@@ -536,7 +542,7 @@
 	.mobile-phone,
 	.decktop-phone,
 	.mailto, .maplink{
-		font-size: 12px;
+		font-size: 10px;
 	}
 	.open__item-text1{
 		font-size: 10px;
@@ -561,7 +567,6 @@
 	}
 	.maplink {
 		display: inline-block;
-		max-width: 115px;
 	}
 	.cell__line-footer{
 		height: auto;
@@ -573,9 +578,12 @@
 		font-size: 7px;
 	}
 }
-@media screen and (max-width: 430px) {
-	.contact__item-text, .mobile-phone, .decktop-phone, .mailto, .maplink {
-		font-size: 10px;
+@media screen and (max-width: 435px) {
+	.contact__item-text,
+	.mobile-phone,
+	.decktop-phone,
+	.mailto, .maplink{
+		font-size: 8.5px;
 	}
 }
 @media screen and (max-width: 420px) {
@@ -593,6 +601,14 @@
 		font-size: 10px;
 	}
 }
+@media screen and (max-width: 391px) {
+	.contact__item-text,
+	.mobile-phone,
+	.decktop-phone,
+	.mailto, .maplink{
+		font-size: 8px;
+	}
+}
 @media screen and (max-width: 380px) {
 	.dablticket{
 		box-shadow: none;
@@ -608,6 +624,14 @@
 	}
 	.contact.mobile {
 		align-items: baseline;
+	}
+}
+@media screen and (max-width: 378px) {
+	.contact__item-text,
+	.mobile-phone,
+	.decktop-phone,
+	.mailto, .maplink{
+		font-size: 7px;
 	}
 }
 @media screen and (max-width: 370px) {
