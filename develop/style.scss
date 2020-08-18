@@ -156,6 +156,9 @@ span{
 		/*width: 48.25rem!important;*/
 		padding: 0 16px; 
 }
+.slider2__item:focus {
+	outline: none;
+}
 .slider_item-link{
 	position: absolute;
 	left: 16px;
