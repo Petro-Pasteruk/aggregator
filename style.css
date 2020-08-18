@@ -738,6 +738,7 @@ footer{
 	line-height: 2;
 	letter-spacing: 0.1em;
 	margin-bottom: 1rem;
+	white-space: nowrap;
 }
 .contact__item{
 	display: -webkit-box;
