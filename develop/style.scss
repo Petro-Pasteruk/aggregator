@@ -1,20 +1,23 @@
-@import url("css/normalize.css");
+@import "slick/slick.scss";
+@import "slick/slick-theme.scss";
+
+@import "css/normalize";
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap');
 @font-face {
 	font-family: 'Avenir Next';
 	src: local('Avenir Next Bold'), local('Avenir-Next-Bold'),
-	url('fonts/AvenirNextCyr-Bold.woff2') format('woff2'),
-	url('fonts/AvenirNextCyr-Bold.woff') format('woff'),
-	url('fonts/AvenirNextCyr-Bold.ttf') format('truetype');
+	url('../fonts/AvenirNextCyr-Bold.woff2') format('woff2'),
+	url('../fonts/AvenirNextCyr-Bold.woff') format('woff'),
+	url('../fonts/AvenirNextCyr-Bold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'Bebas Neue';
 	src: local('Bebas Neue Regular'), local('Bebas-Neue-Regular'),
-	url('fonts/BebasNeueRegular.woff2') format('woff2'),
-	url('fonts/BebasNeueRegular.woff') format('woff'),
-	url('fonts/BebasNeueRegular.ttf') format('truetype');
+	url('../fonts/BebasNeueRegular.woff2') format('woff2'),
+	url('../fonts/BebasNeueRegular.woff') format('woff'),
+	url('../fonts/BebasNeueRegular.ttf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -42,7 +45,7 @@ body {
 	font-size: 1rem;
     letter-spacing: 0.05em;
 	margin: 0;
-	background-image: url(images/st-aug.jpg);
+	background-image: url(../images/st-aug.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -207,12 +210,14 @@ li.slick-active {
 }
 .slick-next {
 	right: 1.5%;
-	background-image: url(images/next.png);
-	background-size: cover;
+	background-image: url(../images/next.png) !important;
+	background-size: cover !important;
 }
 .slick-prev:before, .slick-next:before{
-	font-size: 60px;
+	font-size: 0 !important;
 }
+.slick-prev:before {}
+.slick-prev:before {}
 .slick-prev, .slick-next {
     width: 50px;
 	height: 50px;
@@ -220,8 +225,8 @@ li.slick-active {
 .slick-prev {
     left: 1.5%;
 	z-index: 100;
-	background-image: url(images/back.png);
-	background-size: cover;
+	background-image: url(../images/back.png) !important;
+	background-size: cover !important;
 }
 .button{
 	border-radius: 5px;
@@ -726,7 +731,7 @@ footer{
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	background-image: url("images/footer_bg.png");
+	background-image: url("../images/footer_bg.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -854,3 +859,6 @@ a[href^="tel"]{
 	-webkit-animation-delay:1.8s;
 	        animation-delay:1.8s;
 }
+
+@import "css/nice-select";
+@import "css/responsive";
