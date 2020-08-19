@@ -13,7 +13,8 @@ const
     concat = require('gulp-concat');
 
 gulp.task("jsComp", function () {
-    return gulp.src("./develop/js/*")
+    return gulp.src(/*["./develop/js/slick.min.js", "./develop/js/rotate.js", "./develop/js/script.js", "./develop/js/jquery.nice-select.min.js", "./develop/js/main.js"]*/ "./develop/js/*.js")
+        // .pipe(concat('main.js'))
         .pipe(gulp.dest("./docs/js/"));
 });
 
@@ -37,11 +38,11 @@ gulp.task("html", function () {
 gulp.task("scssComp", function () {
     return gulp.src("./develop/style.scss")
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(rename({suffix: '.min'}))
         .pipe(autoPrefix({
             overrideBrowserslist: ["last 4 versions"]
         }))
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write())
         .pipe( gulp.dest("./docs/css/"));
 });
