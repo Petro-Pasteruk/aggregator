@@ -71,6 +71,10 @@
 	html{
 		font-size: 100%;
 	}
+	.slider3:focus,
+	.slider3 *:focus {
+		outline: none;
+	}
 	.open__item-text.center {
 		margin-right: 10px;
 	}
