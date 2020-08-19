@@ -45,7 +45,7 @@ body {
 	font-size: 1rem;
     letter-spacing: 0.05em;
 	margin: 0;
-	background-image: url(../images/st-aug.jpg);
+	background-image: url(../img/jpg/st-aug.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -213,7 +213,7 @@ li.slick-active {
 }
 .slick-next {
 	right: 1.5%;
-	background-image: url(../images/next.png) !important;
+	background-image: url(../img/png/next.png) !important;
 	background-size: cover !important;
 }
 .slick-prev:before, .slick-next:before{
@@ -228,7 +228,7 @@ li.slick-active {
 .slick-prev {
     left: 1.5%;
 	z-index: 100;
-	background-image: url(../images/back.png) !important;
+	background-image: url(../img/png/back.png) !important;
 	background-size: cover !important;
 }
 .button{
@@ -734,7 +734,7 @@ footer{
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	background-image: url("../images/footer_bg.png");
+	background-image: url("../img/png/footer_bg.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
