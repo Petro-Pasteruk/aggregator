@@ -151,6 +151,10 @@ span{
 .slider4{
 	margin-top: 104px;
 }
+.slider4:focus,
+.slider4 *:focus {
+	outline: none;
+}
 .slider4_item{
 	position: relative;
 		/*width: 48.25rem!important;*/
