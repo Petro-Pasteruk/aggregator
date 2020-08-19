@@ -13,8 +13,14 @@ const
     concat = require('gulp-concat');
 
 gulp.task("jsComp", function () {
-    return gulp.src(/*["./develop/js/slick.min.js", "./develop/js/rotate.js", "./develop/js/script.js", "./develop/js/jquery.nice-select.min.js", "./develop/js/main.js"]*/ "./develop/js/*.js")
-        // .pipe(concat('main.js'))
+    return gulp.src(["./develop/js/slick.min.js", "./develop/js/rotate.js", "./develop/js/script.js", "./develop/js/jquery.nice-select.min.js", "./develop/js/main.js"] /*"./develop/js/*.js"*/)
+        .pipe(concat('main.js'))
+        .pipe(minify({
+            ext: {
+                min: '.min.js'
+            },
+            ignoreFiles: ['-min.js']
+        }))
         .pipe(gulp.dest("./docs/js/"));
 });
 
