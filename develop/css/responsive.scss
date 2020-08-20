@@ -452,6 +452,10 @@
 	.open__item-text.center {
 		margin-right: 6px;
 	}
+	.contact__item-text1, .mailto, .maplink,
+	.contact__item-text, .mobile-phone, .decktop-phone {
+		font-size: 15px;
+	}
 }
 @media screen and (max-width: 450px) {
 	html {
@@ -554,14 +558,9 @@
 	.h1 {
 		font-size: 16px
 	}
-	.contact__item-text,
-	.mobile-phone,
-	.decktop-phone,
-	.mailto, .maplink{
-		font-size: 10px;
-	}
-	.open__item-text1{
-		font-size: 10px;
+	.contact__item-text1, .mailto, .maplink,
+	.contact__item-text, .mobile-phone, .decktop-phone {
+		font-size: 12px;
 	}
 	.open__item-text{
 		font-size: 12px;
@@ -599,12 +598,20 @@
 	.mobile-phone,
 	.decktop-phone,
 	.mailto, .maplink{
-		font-size: 8.5px;
+		font-size: 11px;
 	}
 }
 @media screen and (max-width: 420px) {
 	.contact__item-img {
 		min-width: 26px;
+	}
+}
+@media screen and (max-width: 405px) {
+	.contact__item-text,
+	.mobile-phone,
+	.decktop-phone,
+	.mailto, .maplink{
+		font-size: 10px;
 	}
 }
 @media screen and (max-width: 400px) {
@@ -622,7 +629,10 @@
 	.mobile-phone,
 	.decktop-phone,
 	.mailto, .maplink{
-		font-size: 8px;
+		font-size: 11px;
+	}
+	.contact {
+		padding: 15px;
 	}
 }
 @media screen and (max-width: 380px) {
@@ -633,7 +643,7 @@
 		margin-right: .95rem;
 	}
 	.open__item-text {
-		font-size: 10px;
+		font-size: 11px;
 	}
 	.h1 {
 		font-size: 14px;
@@ -642,12 +652,13 @@
 		align-items: baseline;
 	}
 }
-@media screen and (max-width: 378px) {
+@media screen and (max-width: 375px) {
 	.contact__item-text,
 	.mobile-phone,
 	.decktop-phone,
-	.mailto, .maplink{
-		font-size: 7px;
+	.mailto, .maplink,
+	.open__item-text {
+		font-size: 10px;
 	}
 }
 @media screen and (max-width: 370px) {
@@ -679,7 +690,20 @@
 		padding: 0 10px;
 		width: 55%;
 	}
-	.contact {
-		padding: 15px 15px;
+	.contact__item-text,
+	.mobile-phone,
+	.decktop-phone,
+	.mailto, .maplink,
+	.open__item-text {
+		font-size: 9px;
+	}
+}
+@media screen and (max-width: 327px) {
+	.contact__item-text,
+	.mobile-phone,
+	.decktop-phone,
+	.mailto, .maplink,
+	.open__item-text {
+		font-size: 8.6px;
 	}
 }
