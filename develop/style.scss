@@ -509,6 +509,9 @@ section::-webkit-scrollbar {
     /*margin-top: 3.75rem;*/
     margin-bottom: 16px;
 }
+.page__cell-feedback + a {
+	display: block;
+}
 .link img{
 	width: 58px;
 }
