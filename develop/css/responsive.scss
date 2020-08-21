@@ -71,6 +71,13 @@
 	html{
 		font-size: 100%;
 	}
+	.page__cell-feedback {
+		font-size: 2.2rem;
+		margin-bottom: 26px;
+	}
+	.page__cell-headline {
+		margin-top: 30px;
+	}
 	.slider3:focus,
 	.slider3 *:focus {
 		outline: none;
@@ -337,6 +344,7 @@
 	}
 	.buttom-reserve, .btn__enjoy {
 		font-size: 18px;
+		font-weight: 600;
 	}
 	.page__cell-feedback {
 		margin-top: 10px;
@@ -460,7 +468,7 @@
 }
 @media screen and (max-width: 481px) {
 	.slider1__headline {
-		font-size: 1.5rem;
+		width: 100%;
 	}
 }
 @media screen and (max-width: 450px) {

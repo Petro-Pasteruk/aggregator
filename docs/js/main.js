@@ -294,7 +294,7 @@ $(document).ready(function () {
 \t\t\t\t\t\t\t\t<div class="h1">Hours open <span>365</span> days</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Monday:</div>
-\t\t\t\t\t\t\t\t\t<div class="open__item-text firstOpenItemText">10 am – 11 pm</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text firstOpenItemText" style="margin-right: 2px;">10 am – 11 pm</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Tuesday:</div>
