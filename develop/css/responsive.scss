@@ -458,6 +458,11 @@
 		font-size: 15px;
 	}
 }
+@media screen and (max-width: 481px) {
+	.slider1__headline {
+		font-size: 1.5rem;
+	}
+}
 @media screen and (max-width: 450px) {
 	html {
 		font-size: 45%;
