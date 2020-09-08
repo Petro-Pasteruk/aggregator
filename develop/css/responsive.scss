@@ -624,6 +624,9 @@
 	.contact__item-img {
 		min-width: 26px;
 	}
+	.removeBr {
+		display: none;
+	}
 }
 @media screen and (max-width: 405px) {
 	.contact__item-text,
