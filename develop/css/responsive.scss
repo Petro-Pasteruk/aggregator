@@ -1,3 +1,11 @@
+@media only screen and (max-height: 697px) {
+	.section1__bottom{
+		margin-top: 32px;
+	}
+ }
+ 
+
+
 @media screen and (max-width: 1940px) {
 	.contact {
 		flex-basis: 50%;
@@ -17,6 +25,7 @@
 		padding: 45px 10px 50px 10px;
 	}
 }
+
 @media screen and (max-width: 1545px) {
 	html{
 		font-size: 75%;
@@ -34,6 +43,9 @@
 		padding: 2px 4px 3px 3px;
 	}
 }
+
+
+
 @media screen and (max-width: 995px) {
 	.contact-us {
 		margin-right: 5%;
@@ -614,11 +626,7 @@
 	.mailto, .maplink{
 		font-size: 11px;
 	}
-	*,
-	*::after,
-	*::before {
-		overflow-x: hidden;
-	}
+ 
 }
 @media screen and (max-width: 420px) {
 	.contact__item-img {
