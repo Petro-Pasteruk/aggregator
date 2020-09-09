@@ -124,7 +124,7 @@ $(document).ready(function () {
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">10 am – 11 pm</div>
 \t\t\t\t\t\t\t\t</div><br>
 \t\t\t\t\t\t\t\t<div class="open__item">
-\t\t\t\t\t\t\t\t\t<div class="open__item-text1">Last ticket sold one hour prior<br class="removeBr">to closing</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text1">Last Ticket Sold One Hour Prior<br class="removeBr">to Closing</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>`;
         newOpen.innerHTML = `
@@ -159,7 +159,7 @@ $(document).ready(function () {
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">10 am – 10 pm</div>
 \t\t\t\t\t\t\t\t</div><br>
 \t\t\t\t\t\t\t\t<div class="open__item">
-\t\t\t\t\t\t\t\t\t<div class="open__item-text1">Last ticket sold one hour prior<br class="removeBr"> to closing</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text1">Last Ticket Sold One Hour Prior<br class="removeBr">to Closing</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>`;
 
@@ -174,212 +174,111 @@ $(document).ready(function () {
             saveFullRemoveTab = [],
             currentSelectedCity = "Chicago";
 
-        let
-            parentContact = document.querySelector(".contact"),
-            currentItemAddress = document.querySelector(".contact .contact-us .contact__item.address .contact__item-text1"),
-            parentElementItemAddress = currentItemAddress.parentNode,
-            currentOpen = document.querySelector(".contact .open"),
-            parentMap = document.querySelector("#parentMap"),
-            parentParentMap = parentMap.parentElement;
-
-        const
-            currentNiceSelect = $(".nice-select .current"),
-            allRemoveTab = document.querySelectorAll(".removeTab"),
-            allRemoveStyleTab = document.querySelectorAll(".removeStyle"),
-            allTab = document.querySelectorAll(".tab"),
-            cellLineAddSb = document.querySelector(".cell__line.addSb"),
-            visibleTab = document.querySelector(".visibleTab"),
-            allFullRemoveTab = document.querySelectorAll(".fullRemoveTab");
-
-
-        function ifChicago () {
-            parentContact.removeChild(currentOpen);
-            parentContact.appendChild(oldOpen);
-
-            const
-                centerElements =  document.querySelectorAll(".open__item-text.center"),
-                firstOpenItemText = document.querySelector(".firstOpenItemText");
-
-            centerElements.forEach(item => {
-                item.setAttribute("style", "");
-            });
-            firstOpenItemText.setAttribute("style", "");
-
-            parentElementItemAddress.removeChild(currentItemAddress);
-            parentElementItemAddress.appendChild(oldContactItem);
-
-            if (parentMap != oldMapParent) {
-                parentParentMap.removeChild(parentMap);
-                parentParentMap.appendChild(oldMapParent);
-            }
-            allRemoveTab.forEach(item => {
-                item.style.display = "block";
-            });
-            // slider1;
-            // slider1;
-            // slider2;
-            // slider2;
-
-            const
-                slider1 = document.getElementById("slider1"),
-                slider2 = document.getElementById("slider2");
-
-            if (saveFullRemoveTab[0] && saveFullRemoveTab[1] && saveFullRemoveTab[2] && saveFullRemoveTab[3]) {
-                slider1.querySelector(".slider1__item").parentElement.append(saveFullRemoveTab[0]);
-                slider1.querySelector(".slider1__item").parentElement.append(saveFullRemoveTab[1]);
-                slider2.querySelector(".slider2__item").parentElement.append(saveFullRemoveTab[2]);
-                slider2.querySelector(".slider2__item").parentElement.append(saveFullRemoveTab[3]);
-            }
-
-            saveFullRemoveTab = [];
-
-            allRemoveStyleTab.forEach(item => {
-                item.setAttribute("style", "");
-            });
-            allTab.forEach(item => {
-                item.setAttribute("style", "");
-            });
-            cellLineAddSb.setAttribute("style", "");
-            visibleTab.style.display = "none";
-
-            sessionStorage.setItem("selectCity", "Chicago");
-        }
-
-        function ifAugustine () {
-            parentContact.removeChild(currentOpen);
-            parentContact.appendChild(newOpen);
-
-            const
-                centerElements =  document.querySelectorAll(".open__item-text.center"),
-                firstOpenItemText = document.querySelector(".firstOpenItemText");
-            centerElements.forEach(item => {
-                item.style.marginRight = "0";
-            });
-            firstOpenItemText.style.marginRight = "3px";
-
-            parentElementItemAddress.removeChild(currentItemAddress);
-            parentElementItemAddress.appendChild(newContactItem);
-
-            if (parentMap != newMapParent) {
-                parentParentMap.removeChild(parentMap);
-                parentParentMap.appendChild(newMapParent);
-            }
-            allTab.forEach(item => {
-                item.setAttribute("style", "width: 50%;");
-            });
-            allRemoveTab.forEach(item => {
-                item.style.display = "none";
-            });
-            allFullRemoveTab.forEach(item => {
-                saveFullRemoveTab.push(item);
-                item.parentNode.removeChild(item);
-            });
-
-            visibleTab.querySelector(".cell__line").style.justifyContent = "space-between";
-            visibleTab.style.display = "block";
-            visibleTab.querySelector(".dablticket .blockHover").style.transform = "translateY(-51%)";
-
-            sessionStorage.setItem("selectCity", "St. Augustine");
-        }
-
-        navigator.geolocation.getCurrentPosition(
-            function(position) {
-
-                const
-                    coordinatesChicago = {
-                        latitude: 41.879090,
-                        longitude: -87.627480
-                    },
-                    coordinatesAugustine = {
-                        latitude: 29.894616,
-                        longitude: -81.313250
-                    },
-                    distanceChicago = {
-                        latitude: position.coords.latitude - coordinatesChicago.latitude,
-                        longitude: position.coords.longitude - coordinatesChicago.longitude
-                    },
-                    distanceAugustine = {
-                        latitude: position.coords.latitude - coordinatesAugustine.latitude,
-                        longitude: position.coords.longitude - coordinatesAugustine.longitude
-                    };
-
-                if (sessionStorage.getItem("selectCity")) {
-                    const selectCurrentAll = document.querySelectorAll(".nice-select .current");
-                    selectCurrentAll.forEach(item => {
-                        item.innerText = sessionStorage.getItem("selectCity");
-                    });
-
-                    if (document.documentElement.clientWidth > 795) {
-                        if (sessionStorage.getItem("selectCity") === "St. Augustine") {
-                            ifAugustine();
-                            const centerElements = document.querySelectorAll(".open__item-text.center");
-                            centerElements.forEach(item => {
-                                item.removeAttribute("style");
-                            });
-                        } else {
-                            ifChicago();
-                        }
-                    } else {
-                        parentContact = document.querySelector(".contact.mobile");
-                        currentItemAddress = document.querySelector(".contact.mobile .contact-us .contact__item.address .contact__item-text1");
-                        parentElementItemAddress = currentItemAddress.parentNode;
-                        currentOpen = document.querySelector(".contact.mobile .open");
-                        parentMap = document.querySelector("#parentMobileMap");
-                        parentParentMap = parentMap.parentElement;
-
-                        oldMapParent.setAttribute("id", "parentMobileMap");
-                        newMapParent.setAttribute("id", "parentMobileMap");
-
-                        if (sessionStorage.getItem("selectCity") === "St. Augustine") {
-                            ifAugustine();
-                        } else {
-                            ifChicago();
-                        }
-                    }
-                } else if (distanceChicago.latitude > distanceAugustine.latitude || distanceChicago.longitude > distanceAugustine.longitude) {
-                    const selectCurrentAll = document.querySelectorAll(".nice-select .current");
-                    selectCurrentAll.forEach(item => {
-                        item.innerText = "St. Augustine";
-                    });
-                    ifAugustine();
-                    const centerElements =  document.querySelectorAll(".open__item-text.center");
-                    centerElements.forEach(item => {
-                        item.removeAttribute("style");
-                    });
-
-                    if (document.documentElement.clientWidth > 795) {
-                        ifAugustine();
-                    } else {
-                        parentContact = document.querySelector(".contact.mobile");
-                        currentItemAddress = document.querySelector(".contact.mobile .contact-us .contact__item.address .contact__item-text1");
-                        parentElementItemAddress = currentItemAddress.parentNode;
-                        currentOpen = document.querySelector(".contact.mobile .open");
-                        parentMap = document.querySelector("#parentMobileMap");
-                        parentParentMap = parentMap.parentElement;
-
-                        oldMapParent.setAttribute("id", "parentMobileMap");
-                        newMapParent.setAttribute("id", "parentMobileMap");
-
-                        ifAugustine();
-                    }
-                }
-            },
-
-            function(error){
-                if (sessionStorage.getItem("selectCity")) {
-                    const selectCurrent = document.querySelector(".nice-select .current");
-                    selectCurrent.innerText = sessionStorage.getItem("selectCity");
-                    if (sessionStorage.getItem("selectCity") === "St. Augustine") {
-                        ifAugustine();
-                    } else {
-                        ifChicago();
-                    }
-                }
-            }
-        );
-        
         $(".nice-select").on("click", function (e) {
             if (counter) {
+                let
+                    parentContact = document.querySelector(".contact"),
+                    currentItemAddress = document.querySelector(".contact .contact-us .contact__item.address .contact__item-text1"),
+                    parentElementItemAddress = currentItemAddress.parentNode,
+                    currentOpen = document.querySelector(".contact .open"),
+                    parentMap = document.querySelector("#parentMap"),
+                    parentParentMap = parentMap.parentElement;
+
+                const
+                    currentNiceSelect = $(".nice-select .current"),
+                    allRemoveTab = document.querySelectorAll(".removeTab"),
+                    allRemoveStyleTab = document.querySelectorAll(".removeStyle"),
+                    allTab = document.querySelectorAll(".tab"),
+                    cellLineAddSb = document.querySelector(".cell__line.addSb"),
+                    visibleTab = document.querySelector(".visibleTab"),
+                    allFullRemoveTab = document.querySelectorAll(".fullRemoveTab");
+
+
+                function ifChicago () {
+                        parentContact.removeChild(currentOpen);
+                        parentContact.appendChild(oldOpen);
+
+                        const
+                            centerElements =  document.querySelectorAll(".open__item-text.center"),
+                            firstOpenItemText = document.querySelector(".firstOpenItemText");
+
+                        centerElements.forEach(item => {
+                            item.setAttribute("style", "");
+                        });
+                        firstOpenItemText.setAttribute("style", "");
+
+                        parentElementItemAddress.removeChild(currentItemAddress);
+                        parentElementItemAddress.appendChild(oldContactItem);
+
+                        if (parentMap != oldMapParent) {
+                            parentParentMap.removeChild(parentMap);
+                            parentParentMap.appendChild(oldMapParent);
+                        }
+                        allRemoveTab.forEach(item => {
+                            item.style.display = "block";
+                        });
+                        // slider1;
+                        // slider1;
+                        // slider2;
+                        // slider2;
+
+                        const
+                            slider1 = document.getElementById("slider1"),
+                            slider2 = document.getElementById("slider2");
+
+                        if (saveFullRemoveTab[0] && saveFullRemoveTab[1] && saveFullRemoveTab[2] && saveFullRemoveTab[3]) {
+                            slider1.querySelector(".slider1__item").parentElement.append(saveFullRemoveTab[0]);
+                            slider1.querySelector(".slider1__item").parentElement.append(saveFullRemoveTab[1]);
+                            slider2.querySelector(".slider2__item").parentElement.append(saveFullRemoveTab[2]);
+                            slider2.querySelector(".slider2__item").parentElement.append(saveFullRemoveTab[3]);
+                        }
+
+                        saveFullRemoveTab = [];
+
+                        allRemoveStyleTab.forEach(item => {
+                            item.setAttribute("style", "");
+                        });
+                        allTab.forEach(item => {
+                            item.setAttribute("style", "");
+                        });
+                        cellLineAddSb.setAttribute("style", "");
+                        visibleTab.style.display = "none";
+                    }
+
+                function ifAugustine () {
+                    parentContact.removeChild(currentOpen);
+                    parentContact.appendChild(newOpen);
+
+                    const
+                        centerElements =  document.querySelectorAll(".open__item-text.center"),
+                        firstOpenItemText = document.querySelector(".firstOpenItemText");
+                    centerElements.forEach(item => {
+                        item.style.marginRight = "0";
+                    });
+                    firstOpenItemText.style.marginRight = "3px";
+
+                    parentElementItemAddress.removeChild(currentItemAddress);
+                    parentElementItemAddress.appendChild(newContactItem);
+
+                    if (parentMap != newMapParent) {
+                        parentParentMap.removeChild(parentMap);
+                        parentParentMap.appendChild(newMapParent);
+                    }
+                    allTab.forEach(item => {
+                        item.setAttribute("style", "width: 50%;");
+                    });
+                    allRemoveTab.forEach(item => {
+                        item.style.display = "none";
+                    });
+                    allFullRemoveTab.forEach(item => {
+                        saveFullRemoveTab.push(item);
+                        item.parentNode.removeChild(item);
+                    });
+
+                    visibleTab.querySelector(".cell__line").style.justifyContent = "space-between";
+                    visibleTab.style.display = "block";
+                    visibleTab.querySelector(".dablticket .blockHover").style.transform = "translateY(-51%)";
+                }
 
                 setTimeout(() => {
                     if (document.documentElement.clientWidth > 795) {
@@ -471,5 +370,68 @@ $(document).ready(function () {
             }
             counter++;
         });
+
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+
+                const
+                    coordinatesChicago = {
+                        latitude: 41.879090,
+                        longitude: -87.627480
+                    },
+                    coordinatesAugustine = {
+                        latitude: 29.894616,
+                        longitude: -81.313250
+                    },
+                    distanceChicago = {
+                        latitude: position.coords.latitude - coordinatesChicago.latitude,
+                        longitude: position.coords.longitude - coordinatesChicago.longitude
+                    },
+                    distanceAugustine = {
+                        latitude: position.coords.latitude - coordinatesAugustine.latitude,
+                        longitude: position.coords.longitude - coordinatesAugustine.longitude
+                    };
+
+                if (sessionStorage.getItem("selectCity")) {
+                    const
+                        selectCurrentAll = document.querySelectorAll(".nice-select .current"),
+                        allNiceSelect = document.querySelectorAll(".nice-select");
+                    selectCurrentAll.forEach(item => {
+                        item.innerText = sessionStorage.getItem("selectCity");
+                    });
+                    allNiceSelect.forEach(item => {
+                        item.click();
+                        item.click();
+                    })
+                } else if (distanceChicago.latitude > distanceAugustine.latitude || distanceChicago.longitude > distanceAugustine.longitude) {
+                    const
+                        selectCurrentAll = document.querySelectorAll(".nice-select .current"),
+                        allNiceSelect = document.querySelectorAll(".nice-select");
+                    selectCurrentAll.forEach(item => {
+                        item.innerText = "St. Augustine";
+                    });
+                    allNiceSelect.forEach(item => {
+                        item.click();
+                        item.click();
+                    })
+                }
+
+            },
+
+            function(error){
+                if (sessionStorage.getItem("selectCity")) {
+                    const
+                        selectCurrentAll = document.querySelectorAll(".nice-select .current"),
+                        allNiceSelect = document.querySelectorAll(".nice-select");
+                    selectCurrentAll.forEach(item => {
+                        item.innerText = sessionStorage.getItem("selectCity");
+                    });
+                    allNiceSelect.forEach(item => {
+                        item.click();
+                        item.click();
+                    })
+                }
+            }
+        );
     }, 100);
 });
