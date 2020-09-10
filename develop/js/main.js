@@ -243,7 +243,9 @@ $(document).ready(function () {
                         });
                         cellLineAddSb.setAttribute("style", "");
                         visibleTab.style.display = "none";
-                    }
+
+                    sessionStorage.setItem("selectCity", "Chicago");
+                }
 
                 function ifAugustine () {
                     parentContact.removeChild(currentOpen);
@@ -278,6 +280,8 @@ $(document).ready(function () {
                     visibleTab.querySelector(".cell__line").style.justifyContent = "space-between";
                     visibleTab.style.display = "block";
                     visibleTab.querySelector(".dablticket .blockHover").style.transform = "translateY(-51%)";
+
+                    sessionStorage.setItem("selectCity", "St. Augustine");
                 }
 
                 setTimeout(() => {
