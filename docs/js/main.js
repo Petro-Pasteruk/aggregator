@@ -565,10 +565,19 @@ $(document).ready(function () {
                     selectCurrentAll.forEach(item => {
                         item.innerText = sessionStorage.getItem("selectCity");
                     });
-                    allNiceSelect.forEach(item => {
-                        item.click();
-                        item.click();
-                    })
+                    if (sessionStorage.getItem("selectCity") === "Chicago") {
+                        allNiceSelect.forEach(item => {
+                            item.querySelector('.option[data-value="1"]').click();
+                            item.classList.remove("open");
+                        })
+                    } else {
+                        allNiceSelect.forEach(item => {
+                            item.querySelector('.option[data-value="2"]').click();
+                            item.classList.remove("open");
+                            // item.click();
+                            // item.click();
+                        })
+                    }
                 } else if (distanceChicago.latitude > distanceAugustine.latitude || distanceChicago.longitude > distanceAugustine.longitude) {
                     const
                         selectCurrentAll = document.querySelectorAll(".nice-select .current"),
@@ -577,8 +586,8 @@ $(document).ready(function () {
                         item.innerText = "St. Augustine";
                     });
                     allNiceSelect.forEach(item => {
-                        item.click();
-                        item.click();
+                        item.querySelector('.option[data-value="2"]').click();
+                        item.classList.remove("open");
                     })
                 }
 
