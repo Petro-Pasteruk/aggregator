@@ -559,7 +559,6 @@ $(document).ready(function () {
                     };
 
                 if (sessionStorage.getItem("selectCity")) {
-                    alert("sessionStorage");
                     const
                         selectCurrentAll = document.querySelectorAll(".nice-select .current"),
                         allNiceSelect = document.querySelectorAll(".nice-select");
@@ -569,10 +568,12 @@ $(document).ready(function () {
                     if (sessionStorage.getItem("selectCity") === "Chicago") {
                         allNiceSelect.forEach(item => {
                             item.querySelector('.option[data-value="1"]').click();
+                            item.querySelector('.option[data-value="1"]').click();
                             item.classList.remove("open");
                         })
                     } else {
                         allNiceSelect.forEach(item => {
+                            item.querySelector('.option[data-value="2"]').click();
                             item.querySelector('.option[data-value="2"]').click();
                             item.classList.remove("open");
                             // item.click();
@@ -580,7 +581,6 @@ $(document).ready(function () {
                         })
                     }
                 } else if (distanceChicago.latitude > distanceAugustine.latitude || distanceChicago.longitude > distanceAugustine.longitude) {
-                    alert("Test");
                     const
                         selectCurrentAll = document.querySelectorAll(".nice-select .current"),
                         allNiceSelect = document.querySelectorAll(".nice-select");
@@ -588,6 +588,7 @@ $(document).ready(function () {
                         item.innerText = "St. Augustine";
                     });
                     allNiceSelect.forEach(item => {
+                        item.querySelector('.option[data-value="2"]').click();
                         item.querySelector('.option[data-value="2"]').click();
                         item.classList.remove("open");
                     })
