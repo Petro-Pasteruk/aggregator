@@ -400,9 +400,9 @@ $(document).ready(function () {
                     const
                         selectCurrentAll = document.querySelectorAll(".nice-select .current"),
                         allNiceSelect = document.querySelectorAll(".nice-select");
-                    selectCurrentAll.forEach(item => {
-                        item.innerText = sessionStorage.getItem("selectCity");
-                    });
+                    // selectCurrentAll.forEach(item => {
+                    //     item.innerText = sessionStorage.getItem("selectCity");
+                    // });
                     if (sessionStorage.getItem("selectCity") === "Chicago") {
                         allNiceSelect.forEach(item => {
                             item.querySelector('.option[data-value="1"]').click();
@@ -422,9 +422,9 @@ $(document).ready(function () {
                     const
                         selectCurrentAll = document.querySelectorAll(".nice-select .current"),
                         allNiceSelect = document.querySelectorAll(".nice-select");
-                    selectCurrentAll.forEach(item => {
-                        item.innerText = "St. Augustine";
-                    });
+                    // selectCurrentAll.forEach(item => {
+                    //     item.innerText = "St. Augustine";
+                    // });
                     allNiceSelect.forEach(item => {
                         item.querySelector('.option[data-value="2"]').click();
                         item.querySelector('.option[data-value="2"]').click();
@@ -434,20 +434,7 @@ $(document).ready(function () {
 
             },
 
-            function(error){
-                if (sessionStorage.getItem("selectCity")) {
-                    const
-                        selectCurrentAll = document.querySelectorAll(".nice-select .current"),
-                        allNiceSelect = document.querySelectorAll(".nice-select");
-                    selectCurrentAll.forEach(item => {
-                        item.innerText = sessionStorage.getItem("selectCity");
-                    });
-                    allNiceSelect.forEach(item => {
-                        item.click();
-                        item.click();
-                    })
-                }
-            }
+            function(error){}
         );
     }, 100);
 });
