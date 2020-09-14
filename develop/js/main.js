@@ -397,12 +397,7 @@ $(document).ready(function () {
                     };
 
                 if (sessionStorage.getItem("selectCity")) {
-                    const
-                        selectCurrentAll = document.querySelectorAll(".nice-select .current"),
-                        allNiceSelect = document.querySelectorAll(".nice-select");
-                    // selectCurrentAll.forEach(item => {
-                    //     item.innerText = sessionStorage.getItem("selectCity");
-                    // });
+                    const allNiceSelect = document.querySelectorAll(".nice-select");
                     if (sessionStorage.getItem("selectCity") === "Chicago") {
                         allNiceSelect.forEach(item => {
                             item.querySelector('.option[data-value="1"]').click();
@@ -414,17 +409,10 @@ $(document).ready(function () {
                             item.querySelector('.option[data-value="2"]').click();
                             item.querySelector('.option[data-value="2"]').click();
                             item.classList.remove("open");
-                            // item.click();
-                            // item.click();
                         })
                     }
                 } else if (distanceChicago.latitude > distanceAugustine.latitude || distanceChicago.longitude > distanceAugustine.longitude) {
-                    const
-                        selectCurrentAll = document.querySelectorAll(".nice-select .current"),
-                        allNiceSelect = document.querySelectorAll(".nice-select");
-                    // selectCurrentAll.forEach(item => {
-                    //     item.innerText = "St. Augustine";
-                    // });
+                    const allNiceSelect = document.querySelectorAll(".nice-select");
                     allNiceSelect.forEach(item => {
                         item.querySelector('.option[data-value="2"]').click();
                         item.querySelector('.option[data-value="2"]').click();
