@@ -10,6 +10,14 @@
 		<link rel="stylesheet" href="css/style.min.css">
 	</head>
     <body class="page" style="overflow-x: hidden !important;">
+	<div class="loader-wrap">
+		<div class="loader">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
 		<div class="page__desktop">
 			<div class="page__row">
 				<header class="header" id="view2">
@@ -2985,5 +2993,17 @@
 				<!--footer-->
 			</div>
 		<script src="js/main.js"></script>
+	<script>
+		// Preloader
+		window.onload = function (){
+			setTimeout(() => {
+				setTimeout(() => {
+					document.querySelector(".loader-wrap").style.zIndex = "-10";
+				}, 1500);
+				document.querySelector(".loader-wrap").style.opacity = "0";
+				document.querySelector(".content").style.opacity = "1";
+			}, 500);
+		}
+	</script>
     </body>
 </html>
