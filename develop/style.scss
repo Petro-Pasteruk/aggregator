@@ -61,7 +61,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: rgb(1,1,1);
+	background: white;
 	transition: opacity 1.5s;
 	z-index: 1000;
 }
@@ -79,7 +79,7 @@ body {
 	display: inline-block;
 	width: 10px;
 	height: 50px;
-	background-color: darkred;
+	background-color: #3b5998;
 }
 .loader span:nth-child(1) {
 	animation: grow 1s ease-in-out infinite;
