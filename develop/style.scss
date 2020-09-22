@@ -392,12 +392,6 @@ li.slick-active {
 }
 .wrapper input:checked + label {
 	background-color: #fff;
-    -webkit-box-shadow: 0 7px 29px 0 rgba(255, 255, 255, 1),
-            0 15px 29px 0 rgba(255, 255, 255, 1),
-            0 -8px 29px 0 rgba(18, 18, 18, 0.16);
-            box-shadow: 0 7px 29px 0 rgba(255, 255, 255, 1),
-            0 15px 29px 0 rgba(255, 255, 255, 1),
-            0 -8px 29px 0 rgba(18, 18, 18, 0.16);
 	border: none;
 }
 
@@ -426,8 +420,6 @@ li.slick-active {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-    -webkit-box-shadow: 0 5px 29px 0 rgba(18, 18, 18, 0.16);
-            box-shadow: 0 5px 29px 0 rgba(18, 18, 18, 0.16);
 	z-index: 0;
 }
 .wrapper article {
@@ -968,6 +960,12 @@ a[href^="tel"]{
 .deley6{
 	-webkit-animation-delay:1.8s;
 	        animation-delay:1.8s;
+}
+
+.slider1:focus,
+.slider1:focus *,
+.slider1 *:focus {
+	outline: none;
 }
 
 @import "css/nice-select";
