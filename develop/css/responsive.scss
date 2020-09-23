@@ -263,9 +263,6 @@
 	}
 	.wraper input:checked + label {
 		background-color: #fff;
-		box-shadow:
-				0 10px 1.75rem 0 rgba(255, 255, 255, 1),
-				0 -12px 1.75rem 0 rgba(18, 18, 18, 0.16);
 	}
 
 	.wraper article {
@@ -304,7 +301,6 @@
 		position: relative;
 	}
 	.contents{
-		box-shadow: 0 5px 29px 0 rgba(18, 18, 18, 0.16);
 		z-index: 0;
 	}
 
