@@ -266,6 +266,15 @@ span{
     padding: 0;
     cursor: pointer;
 }
+.slick-dots li:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 100%;
+	height: 15px;
+}
 .slick-dots li button:before{
 	display: none;
 }
