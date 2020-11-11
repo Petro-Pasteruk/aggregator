@@ -28,14 +28,13 @@ $('.slider3').slick({
     initialSlide: 7
 });
 $('.slider4').slick({
-    autoplay: false,
     infinite: true,
     slidesToShow: 4,
-    slidesToScroll: 1,
     centerPadding: '8.5rem',
     centerMode: true,
     dots: true,
     arrows: true,
+    swipeToSlide: true,
     responsive:[
         {
             breakpoint: 1270,
