@@ -7,10 +7,10 @@ let sliderOne = $('.slider1').slick({
     infinite: false,
     initialSlide: 0,
     asNavFor: '.slider2',
-    responsive:[
+    responsive: [
         {
             breakpoint: 450,
-            settings:{
+            settings: {
                 centerPadding: '34px',
             }
         }
@@ -35,21 +35,21 @@ $('.slider4').slick({
     dots: true,
     arrows: true,
     swipeToSlide: true,
-    responsive:[
+    responsive: [
         {
             breakpoint: 1270,
-            settings:{
+            settings: {
                 slidesToShow: 3,
             }
         },
         {
             breakpoint: 900,
-            settings:{
+            settings: {
                 slidesToShow: 2,
                 centerPadding: '15.5rem',
             },
         }
-    
+
     ]
 });
 
@@ -193,65 +193,65 @@ $(document).ready(function () {
                     allFullRemoveTab = document.querySelectorAll(".fullRemoveTab");
 
 
-                function ifChicago () {
-                        parentContact.removeChild(currentOpen);
-                        parentContact.appendChild(oldOpen);
+                function ifChicago() {
+                    parentContact.removeChild(currentOpen);
+                    parentContact.appendChild(oldOpen);
 
-                        const
-                            centerElements =  document.querySelectorAll(".open__item-text.center"),
-                            firstOpenItemText = document.querySelector(".firstOpenItemText");
+                    const
+                        centerElements = document.querySelectorAll(".open__item-text.center"),
+                        firstOpenItemText = document.querySelector(".firstOpenItemText");
 
-                        centerElements.forEach(item => {
-                            item.setAttribute("style", "");
-                        });
-                        firstOpenItemText.setAttribute("style", "");
+                    centerElements.forEach(item => {
+                        item.setAttribute("style", "");
+                    });
+                    firstOpenItemText.setAttribute("style", "");
 
-                        parentElementItemAddress.removeChild(currentItemAddress);
-                        parentElementItemAddress.appendChild(oldContactItem);
+                    parentElementItemAddress.removeChild(currentItemAddress);
+                    parentElementItemAddress.appendChild(oldContactItem);
 
-                        if (parentMap != oldMapParent) {
-                            parentParentMap.removeChild(parentMap);
-                            parentParentMap.appendChild(oldMapParent);
-                        }
-                        allRemoveTab.forEach(item => {
-                            item.style.display = "block";
-                        });
-                        // slider1;
-                        // slider1;
-                        // slider2;
-                        // slider2;
+                    if (parentMap != oldMapParent) {
+                        parentParentMap.removeChild(parentMap);
+                        parentParentMap.appendChild(oldMapParent);
+                    }
+                    allRemoveTab.forEach(item => {
+                        item.style.display = "block";
+                    });
+                    // slider1;
+                    // slider1;
+                    // slider2;
+                    // slider2;
 
-                        const
-                            slider1 = document.getElementById("slider1"),
-                            slider2 = document.getElementById("slider2");
+                    const
+                        slider1 = document.getElementById("slider1"),
+                        slider2 = document.getElementById("slider2");
 
-                        if (saveFullRemoveTab[0] && saveFullRemoveTab[1] && saveFullRemoveTab[2] && saveFullRemoveTab[3]) {
-                            slider1.querySelector(".slider1__item").parentElement.append(saveFullRemoveTab[0]);
-                            slider1.querySelector(".slider1__item").parentElement.append(saveFullRemoveTab[1]);
-                            slider2.querySelector(".slider2__item").parentElement.append(saveFullRemoveTab[2]);
-                            slider2.querySelector(".slider2__item").parentElement.append(saveFullRemoveTab[3]);
-                        }
+                    if (saveFullRemoveTab[0] && saveFullRemoveTab[1] && saveFullRemoveTab[2] && saveFullRemoveTab[3]) {
+                        slider1.querySelector(".slider1__item").parentElement.append(saveFullRemoveTab[0]);
+                        slider1.querySelector(".slider1__item").parentElement.append(saveFullRemoveTab[1]);
+                        slider2.querySelector(".slider2__item").parentElement.append(saveFullRemoveTab[2]);
+                        slider2.querySelector(".slider2__item").parentElement.append(saveFullRemoveTab[3]);
+                    }
 
-                        saveFullRemoveTab = [];
+                    saveFullRemoveTab = [];
 
-                        allRemoveStyleTab.forEach(item => {
-                            item.setAttribute("style", "");
-                        });
-                        allTab.forEach(item => {
-                            item.setAttribute("style", "");
-                        });
-                        cellLineAddSb.setAttribute("style", "");
-                        visibleTab.style.display = "none";
+                    allRemoveStyleTab.forEach(item => {
+                        item.setAttribute("style", "");
+                    });
+                    allTab.forEach(item => {
+                        item.setAttribute("style", "");
+                    });
+                    cellLineAddSb.setAttribute("style", "");
+                    visibleTab.style.display = "none";
 
                     sessionStorage.setItem("selectCity", "Chicago");
                 }
 
-                function ifAugustine () {
+                function ifAugustine() {
                     parentContact.removeChild(currentOpen);
                     parentContact.appendChild(newOpen);
 
                     const
-                        centerElements =  document.querySelectorAll(".open__item-text.center"),
+                        centerElements = document.querySelectorAll(".open__item-text.center"),
                         firstOpenItemText = document.querySelector(".firstOpenItemText");
                     centerElements.forEach(item => {
                         item.style.marginRight = "0";
@@ -315,10 +315,10 @@ $(document).ready(function () {
                                 infinite: false,
                                 initialSlide: 0,
                                 asNavFor: '.slider2',
-                                responsive:[
+                                responsive: [
                                     {
                                         breakpoint: 450,
-                                        settings:{
+                                        settings: {
                                             centerPadding: '34px',
                                         }
                                     }
@@ -346,10 +346,10 @@ $(document).ready(function () {
                                 infinite: false,
                                 initialSlide: 0,
                                 asNavFor: '.slider2',
-                                responsive:[
+                                responsive: [
                                     {
                                         breakpoint: 450,
-                                        settings:{
+                                        settings: {
                                             centerPadding: '34px',
                                         }
                                     }
@@ -375,7 +375,7 @@ $(document).ready(function () {
         });
 
         navigator.geolocation.getCurrentPosition(
-            function(position) {
+            function (position) {
 
                 const
                     coordinatesChicago = {
@@ -421,7 +421,31 @@ $(document).ready(function () {
 
             },
 
-            function(error){}
+            function (error) { }
         );
     }, 100);
 });
+
+let reviewCommit = document.querySelectorAll('.tab__content')
+let reviewCommentText = document.querySelectorAll('.tab__text')
+let reviewCommentTextArray = []
+let reviewCommentMore = document.querySelectorAll('.tab__more')
+
+
+
+reviewCommit.forEach(item => {
+    reviewCommentTextArray.push(item.querySelector('.tab__text').innerHTML)
+
+    if (item.querySelector('.tab__text').innerHTML.length > 75) {
+        item.querySelector('.tab__text').innerHTML = item.querySelector('.tab__text').innerHTML.slice(0, 75) + '...'
+    } else {
+        item.querySelector('.tab__more').style.display = 'none'
+    }
+})
+
+reviewCommentMore.forEach((item, i) =>{
+    item.addEventListener('click', ()=>{
+        item.parentNode.querySelector('.tab__text').innerHTML = reviewCommentTextArray[i]
+        item.style.display = 'none'
+    })
+})

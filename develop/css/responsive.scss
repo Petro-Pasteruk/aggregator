@@ -1,3 +1,10 @@
+@media screen and (max-width:1500px) {
+	.wrapper{
+		padding: 20px;
+	}
+}
+
+
 @media only screen and (max-height: 697px) {
 	.section1__bottom{
 		margin-top: 32px;
@@ -321,7 +328,7 @@
 	}*/
 	.article__item{
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		padding-top: 1.75rem;
 		width: 100%;
 	}
@@ -332,6 +339,9 @@
 	}
 	.article__item-img img {
 		border-radius: 50%;
+		height: 86px;
+    width: 86px;
+    object-fit: cover;
 	}
 	.article__item-text{
 		font-size: 18px;
@@ -340,6 +350,7 @@
 		line-height: 1.4;
 		letter-spacing: 0.07em;
 		text-align: left;
+		display: inline;
 	}
 	.article__item-text span{
 		font-size: 14px;

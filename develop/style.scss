@@ -504,11 +504,27 @@ section::-webkit-scrollbar {
 .tab__img {
 	border-radius: 50%;
 	width: 40px;
+	height: 40px;
+	object-fit: cover;
 }
 .tab__text {
 	font-size: 12px;
 	color: #000;
 	font-family: "Montserrat", sans-serif;
+	display: inline;
+}
+.tab__more{
+	border: transparent;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.tab__link{
+	display: block;
+	margin-top: 5px;
 }
 .tab__desc {
 	font-size: 10px;
@@ -587,6 +603,12 @@ section::-webkit-scrollbar {
 	-ms-flex-pack: distribute;
 	    justify-content: space-around;
 	z-index: 100;
+}
+.article__item-name{
+	color: #000;
+	display: block;
+	text-align: center;
+	margin-top: 10px;
 }
 .link{
 	cursor: pointer;
@@ -977,6 +999,41 @@ a[href^="tel"]{
 	outline: none;
 }
 
+
+.review-star {
+	display: flex;
+	margin-bottom: 10px;
+}
+.review-star svg{
+	width: 20px;
+	height: auto;
+}
+
+.review-star.facebook polygon{
+	width: 20px;
+	height: auto;
+	fill: #3b5998;
+	stroke: #3b5998;
+}
+
+.review-star.yelp polygon{
+	width: 20px;
+	height: auto;
+	fill: #f43939;
+	stroke: #f43939;
+}
+
+
+
+
+.review-star.trip svg{
+	width: 15px;
+}
+
+
+.review-star.trip svg+svg{
+	margin-left: 5px;
+}
 
 @import "css/nice-select";
 @import "css/responsive";
