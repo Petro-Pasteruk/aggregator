@@ -591,7 +591,7 @@ $(document).ready(function () {
 let reviewCommit = document.querySelectorAll('.tab__content')
 let reviewCommentText = document.querySelectorAll('.tab__text')
 let reviewCommentTextArray = []
-let reviewCommentMore = document.querySelectorAll('.tab__more')
+let reviewCommentMore = document.querySelectorAll('.tab__content .tab__more')
 
 
 
@@ -608,6 +608,31 @@ reviewCommit.forEach(item => {
 reviewCommentMore.forEach((item, i) =>{
     item.addEventListener('click', ()=>{
         item.parentNode.querySelector('.tab__text').innerHTML = reviewCommentTextArray[i]
+        item.style.display = 'none'
+    })
+})
+
+
+let reviewCommitMobile = document.querySelectorAll('.article__item-content')
+let reviewCommentTextMobile = document.querySelectorAll('.article__item-text')
+let reviewCommentTextArrayMobile = []
+let reviewCommentMoreMobile = document.querySelectorAll('.article__item-content .tab__more')
+
+
+
+reviewCommitMobile.forEach(item => {
+    reviewCommentTextArrayMobile.push(item.querySelector('.article__item-text').innerHTML)
+
+    if (item.querySelector('.article__item-text').innerHTML.length > 75) {
+        item.querySelector('.article__item-text').innerHTML = item.querySelector('.article__item-text').innerHTML.slice(0, 120) + '...'
+    } else {
+        item.querySelector('.tab__more').style.display = 'none'
+    }
+})
+
+reviewCommentMoreMobile.forEach((item, i) =>{
+    item.addEventListener('click', ()=>{
+        item.parentNode.querySelector('.article__item-text').innerHTML = reviewCommentTextArray[i]
         item.style.display = 'none'
     })
 })
