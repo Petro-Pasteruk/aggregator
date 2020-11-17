@@ -445,9 +445,11 @@ reviewCommentMore.forEach((item, i) => {
            if (!item.parentNode.hasAttribute('more')) {
                item.parentNode.querySelector('.tab__text').innerHTML = reviewCommentTextArray[i]
                item.parentNode.setAttribute('more', 'true')
+               item.innerHTML = 'Less'
             } else if(item.parentNode.hasAttributes('more')) {
                 item.parentNode.querySelector('.tab__text').innerHTML = item.parentNode.querySelector('.tab__text').innerHTML.slice(0, 75) + '...'
                 item.parentNode.removeAttribute('more')
+                item.innerHTML = 'More'
             }
     })
 })
@@ -475,9 +477,11 @@ reviewCommentMoreMobile.forEach((item, i) => {
         if (!item.parentNode.hasAttribute('more')) {
             item.parentNode.querySelector('.article__item-text').innerHTML = reviewCommentTextArray[i]
             item.parentNode.setAttribute('more', 'true')
+            item.innerHTML = 'Less'
          } else if(item.parentNode.hasAttributes('more')) {
              item.parentNode.querySelector('.article__item-text').innerHTML = item.parentNode.querySelector('.article__item-text').innerHTML.slice(0, 75) + '...'
              item.parentNode.removeAttribute('more')
+             item.innerHTML = 'More'
          }
     })
 })
