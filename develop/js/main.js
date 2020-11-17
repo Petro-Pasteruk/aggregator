@@ -432,21 +432,23 @@ let reviewCommentTextArray = []
 let reviewCommentMore = document.querySelectorAll('.tab__content .tab__more')
 
 
-
 reviewCommit.forEach(item => {
     reviewCommentTextArray.push(item.querySelector('.tab__text').innerHTML)
 
     if (item.querySelector('.tab__text').innerHTML.length > 75) {
         item.querySelector('.tab__text').innerHTML = item.querySelector('.tab__text').innerHTML.slice(0, 75) + '...'
-    } else {
-        item.querySelector('.tab__more').style.display = 'none'
     }
 })
 
-reviewCommentMore.forEach((item, i) =>{
-    item.addEventListener('click', ()=>{
-        item.parentNode.querySelector('.tab__text').innerHTML = reviewCommentTextArray[i]
-        item.style.display = 'none'
+reviewCommentMore.forEach((item, i) => {
+    item.addEventListener('click', () => {
+           if (!item.parentNode.hasAttribute('more')) {
+               item.parentNode.querySelector('.tab__text').innerHTML = reviewCommentTextArray[i]
+               item.parentNode.setAttribute('more', 'true')
+            } else if(item.parentNode.hasAttributes('more')) {
+                item.parentNode.querySelector('.tab__text').innerHTML = item.parentNode.querySelector('.tab__text').innerHTML.slice(0, 75) + '...'
+                item.parentNode.removeAttribute('more')
+            }
     })
 })
 
@@ -468,9 +470,14 @@ reviewCommitMobile.forEach(item => {
     }
 })
 
-reviewCommentMoreMobile.forEach((item, i) =>{
-    item.addEventListener('click', ()=>{
-        item.parentNode.querySelector('.article__item-text').innerHTML = reviewCommentTextArray[i]
-        item.style.display = 'none'
+reviewCommentMoreMobile.forEach((item, i) => {
+    item.addEventListener('click', () => {
+        if (!item.parentNode.hasAttribute('more')) {
+            item.parentNode.querySelector('.article__item-text').innerHTML = reviewCommentTextArray[i]
+            item.parentNode.setAttribute('more', 'true')
+         } else if(item.parentNode.hasAttributes('more')) {
+             item.parentNode.querySelector('.article__item-text').innerHTML = item.parentNode.querySelector('.article__item-text').innerHTML.slice(0, 75) + '...'
+             item.parentNode.removeAttribute('more')
+         }
     })
 })
