@@ -112,11 +112,11 @@ $(document).ready(function () {
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Friday:</div>
-\t\t\t\t\t\t\t\t\t<div class="open__item-text center">10 am – 1 am</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text ">10 am – 11 pm</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Saturday:</div>
-\t\t\t\t\t\t\t\t\t<div class="open__item-text center">10 am – 1 am</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text ">10 am – 11 pm</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Sunday:</div>
@@ -131,34 +131,34 @@ $(document).ready(function () {
 \t\t\t\t\t\t\t\t<div class="h1">Hours open <span>365</span> days</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Monday:</div>
-\t\t\t\t\t\t\t\t\t<div class="open__item-text firstOpenItemText" style="margin-right: 2px;">10 am – 11 pm</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text firstOpenItemText">10 am – 11 pm</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Tuesday:</div>
-\t\t\t\t\t\t\t\t\t<div class="open__item-text">10 am – 10 pm</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text">10 am – 11 pm</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Wednesday:</div>
-\t\t\t\t\t\t\t\t\t<div class="open__item-text">10 am – 10 pm</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text">10 am – 11 pm</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Thursday:</div>
-\t\t\t\t\t\t\t\t\t<div class="open__item-text">10 am – 10 pm</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text">10 am – 11 pm</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Friday:</div>
-\t\t\t\t\t\t\t\t\t<div class="open__item-text center">10 am – 10 pm</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text center">10 am – 11 pm</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Saturday:</div>
-\t\t\t\t\t\t\t\t\t<div class="open__item-text center">10 am – 10 pm</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text center">10 am – 11 pm</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class="open__item">
 \t\t\t\t\t\t\t\t\t<div class="open__item-text">Sunday:</div>
-\t\t\t\t\t\t\t\t\t<div class="open__item-text">10 am – 10 pm</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text">10 am – 11 pm</div>
 \t\t\t\t\t\t\t\t</div><br>
 \t\t\t\t\t\t\t\t<div class="open__item">
-\t\t\t\t\t\t\t\t\t<div class="open__item-text1">Last ticket told one hour prior<br class="removeBr">to closing</div>
+\t\t\t\t\t\t\t\t\t<div class="open__item-text1">Last ticket sold one hour prior<br class="removeBr">to closing</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>`;
 
@@ -256,8 +256,7 @@ $(document).ready(function () {
                     centerElements.forEach(item => {
                         item.style.marginRight = "0";
                     });
-                    firstOpenItemText.style.marginRight = "3px";
-
+              
                     parentElementItemAddress.removeChild(currentItemAddress);
                     parentElementItemAddress.appendChild(newContactItem);
 

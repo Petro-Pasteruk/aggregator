@@ -347,8 +347,13 @@
 		}
 	}
 	.article__item-img{
-		margin-right: 2.5rem;
-		margin-left: 3.25rem;
+		width: 20%;
+		display: flex;
+    flex-direction: column;
+		align-items: center;
+	}
+	.article__item-content{
+		width: 80%;
 	}
 	.article__item-img img {
 		border-radius: 50%;
