@@ -45,9 +45,14 @@ body {
 	font-size: 1rem;
     letter-spacing: 0.05em;
 	margin: 0;
-	background-image: url(../images/png/st-aug.png);
+	background-image: url(../images/jpg/st-aug.jpg);
 	background-size: cover;
 	background-attachment: fixed;
+}
+
+footer,
+footer > * {
+	font-family: 'Montserrat', sans-serif !important;
 }
 
 /* PRELOADER
@@ -595,6 +600,7 @@ section::-webkit-scrollbar {
 	height: 150px;
 	display: flex;
 	align-items: center;
+	background-color: #fff;
 	justify-content: center;
 }
 [class*="tab1__headline"] a {

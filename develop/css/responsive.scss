@@ -277,7 +277,6 @@
 	.wraper article {
 		position: relative;
 		width: 100%;
-		height: 27.125rem;
 		display: none;
 	}
 	.wraper input[id="tab-11"]:checked ~ .contents .tab-11,
@@ -343,6 +342,9 @@
 		align-items: flex-start;
 		padding-top: 1.75rem;
 		width: 100%;
+		&:last-child {
+			margin-bottom: 10px;
+		}
 	}
 	.article__item-img{
 		margin-right: 2.5rem;
