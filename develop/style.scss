@@ -606,6 +606,22 @@ section::-webkit-scrollbar {
 [class*="tab1__headline"] a {
 	width: 138px;
 }
+[class*="tab1__headline"] img {
+	object-fit: contain;
+}
+
+[class*="tab1__headline"] .facebook{
+	margin-bottom: 10px;
+}
+
+[class*="tab1__headline"] .google {
+	margin-bottom: 6px;
+	height: 35px;
+}
+[class*="tab1__headline"] .yelp{
+	margin-bottom: 23px;
+	height: 60px;
+}
 .tab__link img{
 	width: 15px;
 }
